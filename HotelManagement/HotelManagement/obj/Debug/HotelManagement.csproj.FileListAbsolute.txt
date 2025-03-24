@@ -12,3 +12,17 @@ C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManag
 C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.HomeStaff.resources
 C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.ThongTinCaNhan.resources
 C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.DoiMatKhau.resources
+D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\HotelManagement.exe.config
+D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\HotelManagement.exe
+D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\HotelManagement.pdb
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.csproj.AssemblyReference.cache
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.DoiMatKhau.resources
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.Form1.resources
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.HomeAdmin.resources
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.HomeStaff.resources
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.Properties.Resources.resources
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.ThongTinCaNhan.resources
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.csproj.GenerateResource.cache
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.csproj.CoreCompileInputs.cache
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.exe
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.pdb

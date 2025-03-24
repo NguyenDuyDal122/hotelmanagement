@@ -77,7 +77,7 @@
             this.btn_login.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.Location = new System.Drawing.Point(473, 331);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(106, 62);
+            this.btn_login.Size = new System.Drawing.Size(118, 62);
             this.btn_login.TabIndex = 3;
             this.btn_login.Text = "ĐĂNG NHẬP";
             this.btn_login.UseVisualStyleBackColor = false;
@@ -109,9 +109,9 @@
             // 
             this.btn_thoat.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_thoat.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.Location = new System.Drawing.Point(615, 331);
+            this.btn_thoat.Location = new System.Drawing.Point(603, 331);
             this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Size = new System.Drawing.Size(106, 62);
+            this.btn_thoat.Size = new System.Drawing.Size(118, 62);
             this.btn_thoat.TabIndex = 7;
             this.btn_thoat.Text = "THOÁT";
             this.btn_thoat.UseVisualStyleBackColor = false;

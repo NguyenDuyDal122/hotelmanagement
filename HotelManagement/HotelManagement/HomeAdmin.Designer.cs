@@ -188,7 +188,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(195, 22);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Wedsite: skyhotel.vn";
+            this.label3.Text = "Website: skyhotel.vn";
             // 
             // label4
             // 
