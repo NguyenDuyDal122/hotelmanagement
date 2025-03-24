@@ -10,3 +10,5 @@ C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManag
 C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.pdb
 C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.HomeAdmin.resources
 C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.HomeStaff.resources
+C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.ThongTinCaNhan.resources
+C:\Users\ADMIN\source\repos\HotelManagement\HotelManagement\obj\Debug\HotelManagement.DoiMatKhau.resources

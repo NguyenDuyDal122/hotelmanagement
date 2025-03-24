@@ -51,28 +51,35 @@ namespace HotelManagement
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@password", password);
 
-                        object result = cmd.ExecuteScalar();
+                        object result = cmd.ExecuteScalar(); // Lấy vai trò user
 
                         if (result != null)
                         {
                             string role = result.ToString();
-                            MessageBox.Show($"Đăng nhập thành công!\nQuyền: {role}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            Form mainForm = null;
+                            // Lấy ID của user
+                            string getIdQuery = "SELECT id FROM [User] WHERE username = @username";
+                            using (SqlCommand getIdCmd = new SqlCommand(getIdQuery, connect))
+                            {
+                                getIdCmd.Parameters.AddWithValue("@username", username);
+                                int userId = (int)getIdCmd.ExecuteScalar(); // Lấy userId từ database
 
-                            if (role == "admin")
-                            {
-                                mainForm = new HomeAdmin();
-                            }
-                            else if (role == "staff")
-                            {
-                                mainForm = new HomeStaff();
-                            }
+                                Form mainForm = null;
 
-                            if (mainForm != null)
-                            {
-                                mainForm.Show();
-                                this.Hide();
+                                if (role == "admin")
+                                {
+                                    mainForm = new HomeAdmin(userId); // ✅ Truyền userId
+                                }
+                                else if (role == "staff")
+                                {
+                                    mainForm = new HomeStaff(userId); // ✅ Truyền userId
+                                }
+
+                                if (mainForm != null)
+                                {
+                                    mainForm.Show();
+                                    this.Hide();
+                                }
                             }
                         }
                         else
@@ -85,6 +92,34 @@ namespace HotelManagement
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi kết nối: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận",
+                                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pic_showPassword_Click(object sender, EventArgs e)
+        {
+            // Nếu đang ẩn thì hiện mật khẩu, ngược lại thì ẩn
+            if (txt_password.UseSystemPasswordChar)
+            {
+                txt_password.UseSystemPasswordChar = false; // Hiện mật khẩu
+            }
+            else
+            {
+                txt_password.UseSystemPasswordChar = true; // Ẩn mật khẩu
             }
         }
     }

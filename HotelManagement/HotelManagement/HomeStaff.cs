@@ -12,9 +12,16 @@ namespace HotelManagement
 {
     public partial class HomeStaff : Form
     {
-        public HomeStaff()
+        private int userId;
+        public HomeStaff(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
+        }
+
+        private void HomeStaff_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
