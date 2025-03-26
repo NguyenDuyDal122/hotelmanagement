@@ -111,6 +111,7 @@
             this.btn_qlphong.TabIndex = 6;
             this.btn_qlphong.Text = "Quản lý phòng";
             this.btn_qlphong.UseVisualStyleBackColor = false;
+            this.btn_qlphong.Click += new System.EventHandler(this.btn_qlphong_Click);
             // 
             // btn_qldichvu
             // 

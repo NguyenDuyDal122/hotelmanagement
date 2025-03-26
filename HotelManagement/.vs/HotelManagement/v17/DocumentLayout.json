@@ -1,18 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\",
+  "WorkspaceRootPath": "D:\\hotelmanagement\\HotelManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|c:\\users\\admin\\source\\repos\\hotelmanagement\\hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\managecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\managecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\hotelmanagement\\managefloor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\manageroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\manageroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\manageroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\manageroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\themphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\themphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\themphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\themphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\suaphongcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\suaphongcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\suaphongcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\suaphongcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managefloor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\managefloor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +54,137 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManageCustomer.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageCustomer.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ManageCustomer.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageCustomer.cs",
+              "RelativeToolTip": "HotelManagement\\ManageCustomer.cs",
+              "ViewState": "AQIAANMAAAAAAAAAAAA2wOQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T16:54:37.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManageCustomer.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageCustomer.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ManageCustomer.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageCustomer.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\ManageCustomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T16:54:35.375Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SuaPhongcs.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaPhongcs.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\SuaPhongcs.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaPhongcs.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\SuaPhongcs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T16:11:01.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThemPhong.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThemPhong.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ThemPhong.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThemPhong.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\ThemPhong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T15:49:39.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThemPhong.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThemPhong.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ThemPhong.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThemPhong.cs",
+              "RelativeToolTip": "HotelManagement\\ThemPhong.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAcwKwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T15:58:10.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ManageRoom.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageRoom.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ManageRoom.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageRoom.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\ManageRoom.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T15:15:57.699Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ManageRoom.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageRoom.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ManageRoom.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageRoom.cs",
+              "RelativeToolTip": "HotelManagement\\ManageRoom.cs",
+              "ViewState": "AQIAALsAAAAAAAAAAAAAANQAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T15:28:57.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SuaPhongcs.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaPhongcs.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\SuaPhongcs.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaPhongcs.cs",
+              "RelativeToolTip": "HotelManagement\\SuaPhongcs.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAcwJwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T16:16:06.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ManageStaff.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ManageStaff.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
+              "RelativeToolTip": "HotelManagement\\ManageStaff.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAACVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T14:38:19.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ManageFloor.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\HotelManagement\\ManageFloor.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageFloor.cs",
               "RelativeDocumentMoniker": "HotelManagement\\ManageFloor.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\HotelManagement\\ManageFloor.cs [Design]",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageFloor.cs [Design]",
               "RelativeToolTip": "HotelManagement\\ManageFloor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T12:26:51.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\HotelManagement\\HomeAdmin.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\HomeAdmin.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\HotelManagement\\HomeAdmin.cs",
-              "RelativeToolTip": "HotelManagement\\HomeAdmin.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAewDwAAAApAAAA",
+              "DocumentIndex": 10,
+              "Title": "ManageStaff.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ManageStaff.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\ManageStaff.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T12:25:59.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeAdmin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\HotelManagement\\HomeAdmin.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\HomeAdmin.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\HotelManagement\\HotelManagement\\HomeAdmin.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\HomeAdmin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T12:25:54.928Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-26T14:13:20.886Z"
             }
           ]
         }

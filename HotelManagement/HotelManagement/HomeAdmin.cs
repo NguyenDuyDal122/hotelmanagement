@@ -60,5 +60,11 @@ namespace HotelManagement
             ManageFloor manageFloorForm = new ManageFloor();
             manageFloorForm.ShowDialog();
         }
+
+        private void btn_qlphong_Click(object sender, EventArgs e)
+        {
+            ManageRoom manageRoomForm = new ManageRoom();
+            manageRoomForm.ShowDialog();
+        }
     }
 }

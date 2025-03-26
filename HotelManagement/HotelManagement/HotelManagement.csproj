@@ -120,6 +120,12 @@
     <Compile Include="ManageFloor.Designer.cs">
       <DependentUpon>ManageFloor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageRoom.Designer.cs">
+      <DependentUpon>ManageRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
     <Compile Include="SuaKhachHang.Designer.cs">
       <DependentUpon>SuaKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuaPhongcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaPhongcs.Designer.cs">
+      <DependentUpon>SuaPhongcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="SuaTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </Compile>
     <Compile Include="ThemKhachHang.Designer.cs">
       <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemPhong.Designer.cs">
+      <DependentUpon>ThemPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -176,6 +194,9 @@
     <EmbeddedResource Include="ManageFloor.resx">
       <DependentUpon>ManageFloor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageRoom.resx">
+      <DependentUpon>ManageRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageStaff.resx">
       <DependentUpon>ManageStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,11 +213,17 @@
     <EmbeddedResource Include="SuaKhachHang.resx">
       <DependentUpon>SuaKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SuaPhongcs.resx">
+      <DependentUpon>SuaPhongcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SuaTaiKhoan.resx">
       <DependentUpon>SuaTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemKhachHang.resx">
       <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemPhong.resx">
+      <DependentUpon>ThemPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemTaiKhoan.resx">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
