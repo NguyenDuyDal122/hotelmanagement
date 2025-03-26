@@ -42,5 +42,23 @@ namespace HotelManagement
             DoiMatKhau doiMatKhauForm = new DoiMatKhau(userId); // Truyền userId vào form đổi mật khẩu
             doiMatKhauForm.ShowDialog(); // Mở form đổi mật khẩu
         }
+
+        private void btn_qlnhanvien_Click(object sender, EventArgs e)
+        {
+            ManageStaff manageStaffForm = new ManageStaff();
+            manageStaffForm.ShowDialog();
+        }
+
+        private void btn_qlkhachhang_Click(object sender, EventArgs e)
+        {
+            ManageCustomer manageCustomerForm = new ManageCustomer();
+            manageCustomerForm.ShowDialog();
+        }
+
+        private void btn_qltang_Click(object sender, EventArgs e)
+        {
+            ManageFloor manageFloorForm = new ManageFloor();
+            manageFloorForm.ShowDialog();
+        }
     }
 }

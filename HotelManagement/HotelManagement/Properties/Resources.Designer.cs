@@ -274,6 +274,16 @@ namespace HotelManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_03_26_152901 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-03-26 152901", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap z6412518980260_9ae8491d51d7c1cf3b1f0ba8ece0bf41 {
             get {
                 object obj = ResourceManager.GetObject("z6412518980260_9ae8491d51d7c1cf3b1f0ba8ece0bf41", resourceCulture);

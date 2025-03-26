@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_qltang = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,7 +59,7 @@
             this.btn_thongtin.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thongtin.Location = new System.Drawing.Point(0, 152);
             this.btn_thongtin.Name = "btn_thongtin";
-            this.btn_thongtin.Size = new System.Drawing.Size(316, 50);
+            this.btn_thongtin.Size = new System.Drawing.Size(316, 45);
             this.btn_thongtin.TabIndex = 2;
             this.btn_thongtin.Text = "Thông tin cá nhân";
             this.btn_thongtin.UseVisualStyleBackColor = false;
@@ -68,9 +69,9 @@
             // 
             this.btn_doimatkhau.BackColor = System.Drawing.Color.Silver;
             this.btn_doimatkhau.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_doimatkhau.Location = new System.Drawing.Point(0, 208);
+            this.btn_doimatkhau.Location = new System.Drawing.Point(0, 203);
             this.btn_doimatkhau.Name = "btn_doimatkhau";
-            this.btn_doimatkhau.Size = new System.Drawing.Size(316, 50);
+            this.btn_doimatkhau.Size = new System.Drawing.Size(316, 45);
             this.btn_doimatkhau.TabIndex = 3;
             this.btn_doimatkhau.Text = "Đổi mật khẩu";
             this.btn_doimatkhau.UseVisualStyleBackColor = false;
@@ -80,31 +81,33 @@
             // 
             this.btn_qlnhanvien.BackColor = System.Drawing.Color.Silver;
             this.btn_qlnhanvien.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_qlnhanvien.Location = new System.Drawing.Point(0, 264);
+            this.btn_qlnhanvien.Location = new System.Drawing.Point(0, 254);
             this.btn_qlnhanvien.Name = "btn_qlnhanvien";
-            this.btn_qlnhanvien.Size = new System.Drawing.Size(316, 50);
+            this.btn_qlnhanvien.Size = new System.Drawing.Size(316, 45);
             this.btn_qlnhanvien.TabIndex = 4;
             this.btn_qlnhanvien.Text = "Quản lý nhân viên";
             this.btn_qlnhanvien.UseVisualStyleBackColor = false;
+            this.btn_qlnhanvien.Click += new System.EventHandler(this.btn_qlnhanvien_Click);
             // 
             // btn_qlkhachhang
             // 
             this.btn_qlkhachhang.BackColor = System.Drawing.Color.Silver;
             this.btn_qlkhachhang.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_qlkhachhang.Location = new System.Drawing.Point(0, 320);
+            this.btn_qlkhachhang.Location = new System.Drawing.Point(0, 305);
             this.btn_qlkhachhang.Name = "btn_qlkhachhang";
-            this.btn_qlkhachhang.Size = new System.Drawing.Size(316, 50);
+            this.btn_qlkhachhang.Size = new System.Drawing.Size(316, 45);
             this.btn_qlkhachhang.TabIndex = 5;
             this.btn_qlkhachhang.Text = "Quản lý khách hàng";
             this.btn_qlkhachhang.UseVisualStyleBackColor = false;
+            this.btn_qlkhachhang.Click += new System.EventHandler(this.btn_qlkhachhang_Click);
             // 
             // btn_qlphong
             // 
             this.btn_qlphong.BackColor = System.Drawing.Color.Silver;
             this.btn_qlphong.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_qlphong.Location = new System.Drawing.Point(0, 376);
+            this.btn_qlphong.Location = new System.Drawing.Point(0, 407);
             this.btn_qlphong.Name = "btn_qlphong";
-            this.btn_qlphong.Size = new System.Drawing.Size(316, 50);
+            this.btn_qlphong.Size = new System.Drawing.Size(316, 45);
             this.btn_qlphong.TabIndex = 6;
             this.btn_qlphong.Text = "Quản lý phòng";
             this.btn_qlphong.UseVisualStyleBackColor = false;
@@ -113,9 +116,9 @@
             // 
             this.btn_qldichvu.BackColor = System.Drawing.Color.Silver;
             this.btn_qldichvu.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_qldichvu.Location = new System.Drawing.Point(0, 432);
+            this.btn_qldichvu.Location = new System.Drawing.Point(0, 458);
             this.btn_qldichvu.Name = "btn_qldichvu";
-            this.btn_qldichvu.Size = new System.Drawing.Size(316, 50);
+            this.btn_qldichvu.Size = new System.Drawing.Size(316, 45);
             this.btn_qldichvu.TabIndex = 7;
             this.btn_qldichvu.Text = "Quản lý dịch vụ";
             this.btn_qldichvu.UseVisualStyleBackColor = false;
@@ -124,9 +127,9 @@
             // 
             this.btn_qlhoadon.BackColor = System.Drawing.Color.Silver;
             this.btn_qlhoadon.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_qlhoadon.Location = new System.Drawing.Point(0, 488);
+            this.btn_qlhoadon.Location = new System.Drawing.Point(0, 509);
             this.btn_qlhoadon.Name = "btn_qlhoadon";
-            this.btn_qlhoadon.Size = new System.Drawing.Size(316, 50);
+            this.btn_qlhoadon.Size = new System.Drawing.Size(316, 45);
             this.btn_qlhoadon.TabIndex = 8;
             this.btn_qlhoadon.Text = "Quản lý hóa đơn";
             this.btn_qlhoadon.UseVisualStyleBackColor = false;
@@ -135,9 +138,9 @@
             // 
             this.btn_thongke.BackColor = System.Drawing.Color.Silver;
             this.btn_thongke.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thongke.Location = new System.Drawing.Point(0, 544);
+            this.btn_thongke.Location = new System.Drawing.Point(0, 560);
             this.btn_thongke.Name = "btn_thongke";
-            this.btn_thongke.Size = new System.Drawing.Size(316, 50);
+            this.btn_thongke.Size = new System.Drawing.Size(316, 45);
             this.btn_thongke.TabIndex = 9;
             this.btn_thongke.Text = "Thống kê doanh thu";
             this.btn_thongke.UseVisualStyleBackColor = false;
@@ -146,9 +149,9 @@
             // 
             this.btn_dangxuat.BackColor = System.Drawing.Color.Silver;
             this.btn_dangxuat.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dangxuat.Location = new System.Drawing.Point(0, 600);
+            this.btn_dangxuat.Location = new System.Drawing.Point(0, 611);
             this.btn_dangxuat.Name = "btn_dangxuat";
-            this.btn_dangxuat.Size = new System.Drawing.Size(316, 50);
+            this.btn_dangxuat.Size = new System.Drawing.Size(316, 45);
             this.btn_dangxuat.TabIndex = 13;
             this.btn_dangxuat.Text = "Đăng xuất";
             this.btn_dangxuat.UseVisualStyleBackColor = false;
@@ -188,7 +191,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(195, 22);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Website: skyhotel.vn";
+            this.label3.Text = "Wedsite: skyhotel.vn";
             // 
             // label4
             // 
@@ -202,6 +205,18 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Hotline: 0123456789";
             // 
+            // btn_qltang
+            // 
+            this.btn_qltang.BackColor = System.Drawing.Color.Silver;
+            this.btn_qltang.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_qltang.Location = new System.Drawing.Point(0, 356);
+            this.btn_qltang.Name = "btn_qltang";
+            this.btn_qltang.Size = new System.Drawing.Size(316, 45);
+            this.btn_qltang.TabIndex = 18;
+            this.btn_qltang.Text = "Quản lý tầng";
+            this.btn_qltang.UseVisualStyleBackColor = false;
+            this.btn_qltang.Click += new System.EventHandler(this.btn_qltang_Click);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::HotelManagement.Properties.Resources.black_bedroom_01_decox1;
@@ -214,7 +229,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::HotelManagement.Properties.Resources.pngtree_hotel_building_on_a_white_background_vector_png_image_154679661;
-            this.pictureBox3.Location = new System.Drawing.Point(-18, 628);
+            this.pictureBox3.Location = new System.Drawing.Point(-18, 633);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(343, 235);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -246,6 +261,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1156, 1033);
+            this.Controls.Add(this.btn_qltang);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -298,5 +314,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_qltang;
     }
 }
