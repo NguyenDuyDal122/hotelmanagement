@@ -1,0 +1,11 @@
+D:\hotelmanagement\HotelManagement\BBL\bin\Debug\BBL.dll
+D:\hotelmanagement\HotelManagement\BBL\bin\Debug\BBL.pdb
+D:\hotelmanagement\HotelManagement\BBL\bin\Debug\DAL.dll
+D:\hotelmanagement\HotelManagement\BBL\bin\Debug\DTO.dll
+D:\hotelmanagement\HotelManagement\BBL\bin\Debug\DAL.pdb
+D:\hotelmanagement\HotelManagement\BBL\bin\Debug\DTO.pdb
+D:\hotelmanagement\HotelManagement\BBL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\hotelmanagement\HotelManagement\BBL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\hotelmanagement\HotelManagement\BBL\obj\Debug\BLL.csproj.Up2Date
+D:\hotelmanagement\HotelManagement\BBL\obj\Debug\BBL.dll
+D:\hotelmanagement\HotelManagement\BBL\obj\Debug\BBL.pdb

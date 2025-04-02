@@ -314,5 +314,19 @@
   <ItemGroup>
     <None Include="Resources\Screenshot 2025-03-26 152901.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BBL\BLL.csproj">
+      <Project>{5f243864-2c2b-41ad-826f-bd40797bc9d0}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{8cd94632-0d24-43eb-8437-81598d035051}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{4dc87c3d-1409-455b-9a21-1620c9ac29ed}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

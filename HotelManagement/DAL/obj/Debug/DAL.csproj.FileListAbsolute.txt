@@ -1,0 +1,9 @@
+D:\hotelmanagement\HotelManagement\DAL\bin\Debug\DAL.dll
+D:\hotelmanagement\HotelManagement\DAL\bin\Debug\DAL.pdb
+D:\hotelmanagement\HotelManagement\DAL\bin\Debug\DTO.dll
+D:\hotelmanagement\HotelManagement\DAL\bin\Debug\DTO.pdb
+D:\hotelmanagement\HotelManagement\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\hotelmanagement\HotelManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\hotelmanagement\HotelManagement\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\hotelmanagement\HotelManagement\DAL\obj\Debug\DAL.dll
+D:\hotelmanagement\HotelManagement\DAL\obj\Debug\DAL.pdb

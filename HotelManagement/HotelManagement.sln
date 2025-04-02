@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagement", "HotelManagement\HotelManagement.csproj", "{4EB0A42B-424E-42B1-BB81-633293C5B257}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "HotelManagement\GUI.csproj", "{4EB0A42B-424E-42B1-BB81-633293C5B257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BBL\BLL.csproj", "{5F243864-2C2B-41AD-826F-BD40797BC9D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{8CD94632-0D24-43EB-8437-81598D035051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{4DC87C3D-1409-455B-9A21-1620C9AC29ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{4EB0A42B-424E-42B1-BB81-633293C5B257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EB0A42B-424E-42B1-BB81-633293C5B257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EB0A42B-424E-42B1-BB81-633293C5B257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F243864-2C2B-41AD-826F-BD40797BC9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F243864-2C2B-41AD-826F-BD40797BC9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F243864-2C2B-41AD-826F-BD40797BC9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F243864-2C2B-41AD-826F-BD40797BC9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD94632-0D24-43EB-8437-81598D035051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD94632-0D24-43EB-8437-81598D035051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD94632-0D24-43EB-8437-81598D035051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD94632-0D24-43EB-8437-81598D035051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC87C3D-1409-455B-9A21-1620C9AC29ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC87C3D-1409-455B-9A21-1620C9AC29ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC87C3D-1409-455B-9A21-1620C9AC29ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC87C3D-1409-455B-9A21-1620C9AC29ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

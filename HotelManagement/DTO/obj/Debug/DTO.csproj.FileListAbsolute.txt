@@ -1,0 +1,6 @@
+D:\hotelmanagement\HotelManagement\DTO\bin\Debug\DTO.dll
+D:\hotelmanagement\HotelManagement\DTO\bin\Debug\DTO.pdb
+D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.dll
+D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.pdb

@@ -1,32 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+using DocumentFormat.OpenXml.Wordprocessing;
+using HotelManagement.BLL;
+using HotelManagement.DTO;
 
 namespace HotelManagement
 {
     public partial class Form1 : Form
     {
-        string connectstring = @"Data Source=LAPTOP-CGUI40EU\MAY1;Initial Catalog=HotelManagement;Integrated Security=True;Encrypt=False";
-        SqlConnection connect;
-        SqlCommand cmd;
-        SqlDataAdapter adapter;
-        DataTable dt = new DataTable();
+        private LoginBLL loginBLL;
 
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            connect = new SqlConnection(connectstring);
+            loginBLL = new LoginBLL();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -40,76 +28,41 @@ namespace HotelManagement
                 return;
             }
 
-            try
+            LoginDTO user = loginBLL.AuthenticateUser(username, password);
+
+            if (user != null)
             {
-                using (SqlConnection connect = new SqlConnection(connectstring))
+                Form mainForm = null;
+
+                if (user.Role == "admin")
                 {
-                    connect.Open();
-                    string query = "SELECT role FROM [User] WHERE username = @username AND password_hash = @password";
-                    using (SqlCommand cmd = new SqlCommand(query, connect))
-                    {
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@password", password);
+                    mainForm = new HomeAdmin(user.Id);
+                }
+                else if (user.Role == "staff")
+                {
+                    mainForm = new HomeStaff(user.Id);
+                }
 
-                        object result = cmd.ExecuteScalar(); // Lấy vai trò user
-
-                        if (result != null)
-                        {
-                            string role = result.ToString();
-
-                            // Lấy ID của user
-                            string getIdQuery = "SELECT id FROM [User] WHERE username = @username";
-                            using (SqlCommand getIdCmd = new SqlCommand(getIdQuery, connect))
-                            {
-                                getIdCmd.Parameters.AddWithValue("@username", username);
-                                int userId = (int)getIdCmd.ExecuteScalar(); // Lấy userId từ database
-
-                                Form mainForm = null;
-
-                                if (role == "admin")
-                                {
-                                    mainForm = new HomeAdmin(userId); // ✅ Truyền userId
-                                }
-                                else if (role == "staff")
-                                {
-                                    mainForm = new HomeStaff(userId); // ✅ Truyền userId
-                                }
-
-                                if (mainForm != null)
-                                {
-                                    mainForm.Show();
-                                    this.Hide();
-                                }
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
+                if (mainForm != null)
+                {
+                    mainForm.Show();
+                    this.Hide();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Lỗi kết nối: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận",
-                                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận",
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
         }
-
         private void pic_showPassword_Click(object sender, EventArgs e)
         {
             // Nếu đang ẩn thì hiện mật khẩu, ngược lại thì ẩn
@@ -121,6 +74,14 @@ namespace HotelManagement
             {
                 txt_password.UseSystemPasswordChar = true; // Ẩn mật khẩu
             }
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
