@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using HotelManagement.BLL;
+using HotelManagement.DTO;
 
 namespace HotelManagement
 {
     public partial class SuaTaiKhoan : Form
     {
-        private string connectionString = @"Data Source=LAPTOP-CGUI40EU\MAY1;Initial Catalog=HotelManagement;Integrated Security=True;Encrypt=False";
-        private int userId; 
+        private SuaTaiKhoanBLL bll = new SuaTaiKhoanBLL();
+        private int userId;
+
         public SuaTaiKhoan(int id)
         {
             InitializeComponent();
@@ -25,47 +19,20 @@ namespace HotelManagement
 
         private void LoadUserData()
         {
-            try
+            SuaTaiKhoanDTO user = bll.GetUser(userId);
+            if (user != null)
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT username, full_name, phone, email, role FROM [User] WHERE id = @id";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@id", userId);
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.Read())
-                        {
-                            txt_username.Text = reader["username"].ToString();
-                            txt_fullname.Text = reader["full_name"].ToString();
-                            txt_phone.Text = reader["phone"].ToString();
-                            txt_email.Text = reader["email"].ToString();
-
-                            comboBox_vaitro.Items.Add("admin");
-                            comboBox_vaitro.Items.Add("staff");
-                            comboBox_vaitro.SelectedItem = reader["role"].ToString();
-                        }
-                        reader.Close();
-                    }
-                }
+                txt_username.Text = user.Username;
+                txt_fullname.Text = user.FullName;
+                txt_phone.Text = user.Phone;
+                txt_email.Text = user.Email;
+                comboBox_vaitro.Items.Add("admin");
+                comboBox_vaitro.Items.Add("staff");
+                comboBox_vaitro.SelectedItem = user.Role;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Lỗi khi tải dữ liệu người dùng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                StringBuilder builder = new StringBuilder();
-                foreach (byte b in bytes)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-                return builder.ToString();
+                MessageBox.Show("Không tìm thấy người dùng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -79,82 +46,24 @@ namespace HotelManagement
             string password = txt_matkhau.Text.Trim();
             string confirmPassword = txt_nhaplai.Text.Trim();
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(fullName) ||
-                string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(email))
+            SuaTaiKhoanDTO user = new SuaTaiKhoanDTO
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                Id = userId,
+                Username = username,
+                FullName = fullName,
+                Phone = phone,
+                Email = email,
+                Role = role,
+                Password = password
+            };
 
-            if (!string.IsNullOrEmpty(password) && password != confirmPassword)
+            string result = bll.UpdateUser(user, confirmPassword);
+            MessageBox.Show(result, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (result == "Cập nhật tài khoản thành công!")
             {
-                MessageBox.Show("Mật khẩu nhập lại không khớp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-
-                    // Kiểm tra trùng username, phone, email nhưng bỏ qua user hiện tại
-                    string checkQuery = "SELECT COUNT(*) FROM [User] WHERE (username = @username OR phone = @phone OR email = @email) AND id != @id";
-                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
-                    {
-                        checkCmd.Parameters.AddWithValue("@username", username);
-                        checkCmd.Parameters.AddWithValue("@phone", phone);
-                        checkCmd.Parameters.AddWithValue("@email", email);
-                        checkCmd.Parameters.AddWithValue("@id", userId);
-
-                        int exists = (int)checkCmd.ExecuteScalar();
-                        if (exists > 0)
-                        {
-                            MessageBox.Show("Username, số điện thoại hoặc email đã tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                    }
-
-                    // Cập nhật dữ liệu
-                    string updateQuery = "UPDATE [User] SET username=@username, full_name=@fullName, phone=@phone, email=@email, role=@role";
-
-                    if (!string.IsNullOrEmpty(password))
-                    {
-                        updateQuery += ", password=@password";
-                    }
-
-                    updateQuery += " WHERE id=@id";
-
-                    using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@fullName", fullName);
-                        cmd.Parameters.AddWithValue("@phone", phone);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@role", role);
-                        cmd.Parameters.AddWithValue("@id", userId);
-
-                        if (!string.IsNullOrEmpty(password))
-                        {
-                            cmd.Parameters.AddWithValue("@password", HashPassword(password));
-                        }
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Cập nhật tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.DialogResult = DialogResult.OK;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Cập nhật thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi cập nhật tài khoản: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
 
@@ -165,26 +74,12 @@ namespace HotelManagement
 
         private void pictureBox_nhaplai_Click(object sender, EventArgs e)
         {
-            if (txt_nhaplai.UseSystemPasswordChar)
-            {
-                txt_nhaplai.UseSystemPasswordChar = false; // Hiện mật khẩu
-            }
-            else
-            {
-                txt_nhaplai.UseSystemPasswordChar = true; // Ẩn mật khẩu
-            }
+            txt_nhaplai.UseSystemPasswordChar = !txt_nhaplai.UseSystemPasswordChar;
         }
 
         private void pictureBox_matkhau_Click(object sender, EventArgs e)
         {
-            if (txt_matkhau.UseSystemPasswordChar)
-            {
-                txt_matkhau.UseSystemPasswordChar = false; // Hiện mật khẩu
-            }
-            else
-            {
-                txt_matkhau.UseSystemPasswordChar = true; // Ẩn mật khẩu
-            }
+            txt_matkhau.UseSystemPasswordChar = !txt_matkhau.UseSystemPasswordChar;
         }
     }
 }

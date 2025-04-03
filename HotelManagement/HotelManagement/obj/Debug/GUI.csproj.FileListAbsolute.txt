@@ -54,3 +54,5 @@ D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\System.Memory.xml
 D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\System.Numerics.Vectors.xml
 D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\GUI.csproj.Up2Date
+D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\BBL.dll.config
+D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\DAL.dll.config

@@ -13,7 +13,8 @@ namespace HotelManagement
 {
     public partial class ThemKhachHang : Form
     {
-        private string connectionString = @"Data Source=LAPTOP-CGUI40EU\MAY1;Initial Catalog=HotelManagement;Integrated Security=True;Encrypt=False";
+        private ThemKhachHangBLL customerBLL = new ThemKhachHangBLL();
+
         public ThemKhachHang()
         {
             InitializeComponent();
@@ -37,63 +38,30 @@ namespace HotelManagement
             string address = txt_diachi.Text;
             string identity_card = txt_cccd.Text;
 
-            // Kiểm tra dữ liệu đầu vào
-            if (string.IsNullOrEmpty(full_name) || string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(email) ||
-                string.IsNullOrEmpty(address) || string.IsNullOrEmpty(identity_card))
+            ThemKhachHangDTO newCustomer = new ThemKhachHangDTO()
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                FullName = full_name,
+                Phone = phone,
+                Email = email,
+                Address = address,
+                IdentityCard = identity_card
+            };
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                // Gọi BLL để kiểm tra và thêm khách hàng
+                bool success = customerBLL.ValidateAndAddCustomer(newCustomer);
+                if (success)
                 {
-                    conn.Open();
-
-                    // Kiểm tra username, phone, email có trùng hay không
-                    string checkQuery = "SELECT COUNT(*) FROM [Customer] WHERE phone = @phone OR email = @email OR identity_card = @identity_card";
-                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
-                    {
-                        checkCmd.Parameters.AddWithValue("@identity_card", identity_card);
-                        checkCmd.Parameters.AddWithValue("@phone", phone);
-                        checkCmd.Parameters.AddWithValue("@email", email);
-
-                        int exists = (int)checkCmd.ExecuteScalar();
-                        if (exists > 0)
-                        {
-                            MessageBox.Show("Căn cước công dân, số điện thoại hoặc email đã tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                    }
-
-                    // Chèn dữ liệu mới vào bảng [User]
-                    string insertQuery = "INSERT INTO [Customer] (full_name, phone, email, address, identity_card) VALUES (@full_name, @phone, @email, @address, @identity_card)";
-                    using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@full_name", full_name);
-                        cmd.Parameters.AddWithValue("@phone", phone);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@address", address);
-                        cmd.Parameters.AddWithValue("@identity_card", identity_card);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Thêm khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close(); // Đóng form sau khi thêm thành công
-                        }
-                        else
-                        {
-                            MessageBox.Show("Thêm khách hàng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
+                    MessageBox.Show("Thêm khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close(); // Đóng form sau khi thêm thành công
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi thêm khách hàng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
 }
+

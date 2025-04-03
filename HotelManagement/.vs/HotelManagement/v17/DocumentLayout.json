@@ -3,40 +3,8 @@
   "WorkspaceRootPath": "D:\\hotelmanagement\\HotelManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|d:\\hotelmanagement\\hotelmanagement\\dto\\managestaffdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|solutionrelative:dto\\managestaffdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|D:\\hotelmanagement\\HotelManagement\\dal\\managestaffdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\managestaffdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|D:\\hotelmanagement\\HotelManagement\\bbl\\managestaffbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|solutionrelative:bbl\\managestaffbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\HotelManagement.csproj|solutionrelative:hotelmanagement\\managestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\suakhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\suakhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,107 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ManageStaffDTO.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DTO\\ManageStaffDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\ManageStaffDTO.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DTO\\ManageStaffDTO.cs",
-              "RelativeToolTip": "DTO\\ManageStaffDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Title": "SuaKhachHang.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaKhachHang.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\SuaKhachHang.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaKhachHang.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\SuaKhachHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T19:01:03.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManageStaffDAL.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DAL\\ManageStaffDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\ManageStaffDAL.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DAL\\ManageStaffDAL.cs",
-              "RelativeToolTip": "DAL\\ManageStaffDAL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T19:00:21.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageStaffBLL.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\BBL\\ManageStaffBLL.cs",
-              "RelativeDocumentMoniker": "BBL\\ManageStaffBLL.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\BBL\\ManageStaffBLL.cs",
-              "RelativeToolTip": "BBL\\ManageStaffBLL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T18:59:38.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ManageStaff.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\ManageStaff.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
-              "RelativeToolTip": "HotelManagement\\ManageStaff.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T18:52:43.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ManageStaff.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\ManageStaff.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\ManageStaff.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T18:52:43.211Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HomeAdmin.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HomeAdmin.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\HomeAdmin.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HomeAdmin.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\HomeAdmin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T18:37:19.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\Form1.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\Form1.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\Form1.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T18:36:56.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ManageStaff.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\ManageStaff.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
-              "RelativeToolTip": "HotelManagement\\ManageStaff.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAACVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T14:38:19.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ManageStaff.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\ManageStaff.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ManageStaff.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\ManageStaff.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T14:13:20.886Z"
+              "WhenOpened": "2025-04-03T16:51:57.944Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
