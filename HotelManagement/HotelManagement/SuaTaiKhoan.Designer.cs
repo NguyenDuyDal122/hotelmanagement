@@ -155,7 +155,7 @@
             // 
             this.btn_thoat.BackColor = System.Drawing.Color.Silver;
             this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.Location = new System.Drawing.Point(442, 462);
+            this.btn_thoat.Location = new System.Drawing.Point(424, 472);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(135, 56);
             this.btn_thoat.TabIndex = 17;
@@ -276,7 +276,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SuaTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa tài khoản";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_matkhau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_nhaplai)).EndInit();

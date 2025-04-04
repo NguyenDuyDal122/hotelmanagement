@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\hotelmanagement\\HotelManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\suakhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\suakhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SuaKhachHang.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaKhachHang.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\SuaKhachHang.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaKhachHang.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\SuaKhachHang.cs [Design]",
+              "Title": "HomeAdmin.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HomeAdmin.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\HomeAdmin.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HomeAdmin.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\HomeAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T16:51:57.944Z",
+              "WhenOpened": "2025-04-04T15:35:31.439Z",
               "EditorCaption": " [Design]"
             }
           ]

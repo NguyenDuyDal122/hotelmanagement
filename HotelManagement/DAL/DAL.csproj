@@ -82,11 +82,15 @@
     <Compile Include="DoiMatKhauDAL.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="ManageCustomerDAL.cs" />
+    <Compile Include="ManageFloorDAL.cs" />
+    <Compile Include="ManageRoomDAL.cs" />
     <Compile Include="ManageStaffDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuaKhachHangDAL.cs" />
+    <Compile Include="SuaPhongDAL.cs" />
     <Compile Include="SuaTaiKhoanDAL.cs" />
     <Compile Include="ThemKhachHangDAL.cs" />
+    <Compile Include="ThemPhongDAL.cs" />
     <Compile Include="ThemTaiKhoanDAL.cs" />
     <Compile Include="ThongTinCaNhanDAL.cs" />
   </ItemGroup>

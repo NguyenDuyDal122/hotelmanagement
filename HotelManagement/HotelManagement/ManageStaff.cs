@@ -1,66 +1,24 @@
 ﻿using ClosedXML.Excel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HotelManagement
 {
     public partial class ManageStaff : Form
     {
-        private string connectionString = @"Data Source=LAPTOP-CGUI40EU\MAY1;Initial Catalog=HotelManagement;Integrated Security=True;Encrypt=False"; // Thay bằng chuỗi kết nối của bạn
+        private ManageStaffBLL staffBLL = new ManageStaffBLL();
+
         public ManageStaff()
         {
             InitializeComponent();
             LoadStaffList();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ThemTaiKhoan formThemTaiKhoan = new ThemTaiKhoan();
-            formThemTaiKhoan.ShowDialog();
-        }
-
-        private void dataGridView_danhsachnhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void LoadStaffList()
         {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT id, username, full_name, phone, email, role FROM [User]";
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    dataGridView_danhsachnhanvien.DataSource = dataTable;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tải danh sách người dùng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn_thoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            dataGridView_danhsachnhanvien.DataSource = staffBLL.GetAllStaff();
         }
 
         private void btn_timkiem_Click(object sender, EventArgs e)
@@ -68,80 +26,37 @@ namespace HotelManagement
             string username = txt_username.Text.Trim();
             string phone = txt_phone.Text.Trim();
 
-            try
+            var result = staffBLL.SearchStaff(username, phone); 
+            if (result.Count == 0)
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-
-                    // Xây dựng truy vấn SQL động
-                    string query = "SELECT id, username, full_name, phone, email, role FROM [User] WHERE 1=1";
-
-                    if (!string.IsNullOrEmpty(username))
-                    {
-                        query += " AND username LIKE @username";
-                    }
-                    if (!string.IsNullOrEmpty(phone))
-                    {
-                        query += " AND phone LIKE @phone";
-                    }
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        if (!string.IsNullOrEmpty(username))
-                        {
-                            cmd.Parameters.AddWithValue("@username", "%" + username + "%");
-                        }
-                        if (!string.IsNullOrEmpty(phone))
-                        {
-                            cmd.Parameters.AddWithValue("@phone", "%" + phone + "%");
-                        }
-
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-
-                        // Kiểm tra nếu không có dữ liệu
-                        if (dataTable.Rows.Count == 0)
-                        {
-                            MessageBox.Show("Không tìm thấy nhân viên nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-
-                        // Hiển thị kết quả lên DataGridView
-                        dataGridView_danhsachnhanvien.DataSource = dataTable;
-                    }
-                }
+                MessageBox.Show("Không tìm thấy nhân viên nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            dataGridView_danhsachnhanvien.DataSource = result;
         }
 
         private void btn_lammoi_Click(object sender, EventArgs e)
         {
-            txt_username.Text = "";
-            txt_phone.Text = "";
-
-            LoadStaffList(); // Tải lại danh sách nhân viên
+            txt_username.Clear();
+            txt_phone.Clear();
+            LoadStaffList();
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
             if (dataGridView_danhsachnhanvien.SelectedRows.Count > 0)
             {
-                int id = Convert.ToInt32(dataGridView_danhsachnhanvien.SelectedRows[0].Cells["id"].Value);
+                int id = Convert.ToInt32(dataGridView_danhsachnhanvien.SelectedRows[0].Cells["Id"].Value);
 
-                // Mở form sửa tài khoản và truyền id sang
-                SuaTaiKhoan formSuaTaiKhoan = new SuaTaiKhoan(id);
-                if (formSuaTaiKhoan.ShowDialog() == DialogResult.OK)
+                SuaTaiKhoan suaForm = new SuaTaiKhoan(id);
+                if (suaForm.ShowDialog() == DialogResult.OK)
                 {
                     LoadStaffList();
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn một nhân viên để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn nhân viên cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -149,122 +64,78 @@ namespace HotelManagement
         {
             if (dataGridView_danhsachnhanvien.SelectedRows.Count > 0)
             {
-                int id = Convert.ToInt32(dataGridView_danhsachnhanvien.SelectedRows[0].Cells["id"].Value);
+                int id = Convert.ToInt32(dataGridView_danhsachnhanvien.SelectedRows[0].Cells["Id"].Value);
+                string role = dataGridView_danhsachnhanvien.SelectedRows[0].Cells["Role"].Value.ToString();
 
-                try
+                if (role.ToLower() == "admin")
                 {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        conn.Open();
-
-                        // Kiểm tra role của nhân viên được chọn
-                        string checkRoleQuery = "SELECT role FROM [User] WHERE id = @id";
-                        using (SqlCommand checkRoleCmd = new SqlCommand(checkRoleQuery, conn))
-                        {
-                            checkRoleCmd.Parameters.AddWithValue("@id", id);
-                            string role = (string)checkRoleCmd.ExecuteScalar();
-
-                            if (role.ToLower() == "admin") // Nếu là admin thì không được xóa
-                            {
-                                MessageBox.Show("Không thể xóa tài khoản có quyền Admin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                        }
-
-                        // Xác nhận xóa
-                        DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                        if (result == DialogResult.Yes)
-                        {
-                            string query = "DELETE FROM [User] WHERE id = @id";
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
-                            {
-                                cmd.Parameters.AddWithValue("@id", id);
-                                int rowsAffected = cmd.ExecuteNonQuery();
-
-                                if (rowsAffected > 0)
-                                {
-                                    MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    LoadStaffList(); // Tải lại danh sách sau khi xóa
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Không thể xóa nhân viên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                        }
-                    }
+                    MessageBox.Show("Không thể xóa tài khoản Admin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                catch (Exception ex)
+
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Lỗi khi xóa nhân viên: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (staffBLL.DeleteStaff(id))
+                    {
+                        MessageBox.Show("Xóa nhân viên thành công!", "Thông báo");
+                        LoadStaffList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại!", "Lỗi");
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn một nhân viên để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn nhân viên để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btn_xuatexcel_Click(object sender, EventArgs e)
         {
-            try
+            if (dataGridView_danhsachnhanvien.Rows.Count == 0)
             {
-                if (dataGridView_danhsachnhanvien.Rows.Count > 0)
-                {
-                    // Tạo SaveFileDialog để chọn nơi lưu file
-                    SaveFileDialog saveFileDialog = new SaveFileDialog();
-                    saveFileDialog.Filter = "Excel Files|*.xlsx";
-                    saveFileDialog.Title = "Chọn nơi lưu file Excel";
-                    saveFileDialog.FileName = "DanhSachNhanVien.xlsx";
-
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = saveFileDialog.FileName;
-                        ExportToExcel(filePath);
-                        MessageBox.Show("Xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Không có dữ liệu để xuất!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Không có dữ liệu để xuất!", "Thông báo");
+                return;
             }
-            catch (Exception ex)
+
+            SaveFileDialog save = new SaveFileDialog
             {
-                MessageBox.Show("Lỗi khi xuất Excel: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Filter = "Excel file (*.xlsx)|*.xlsx",
+                FileName = "DanhSachNhanVien.xlsx"
+            };
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                DataTable dt = staffBLL.GetAllStaffsDataTable();
+                using (XLWorkbook wb = new XLWorkbook())
+                {
+                    wb.Worksheets.Add(dt, "DanhSachNhanVien");
+                    wb.SaveAs(save.FileName);
+                }
+
+                MessageBox.Show("Xuất file Excel thành công!", "Thông báo");
             }
         }
-        // Hàm xuất dữ liệu từ DataGridView sang Excel
-        private void ExportToExcel(string filePath)
+        private void label2_Click(object sender, EventArgs e)
         {
-            using (XLWorkbook wb = new XLWorkbook())
-            {
-                DataTable dt = new DataTable();
 
-                // Tạo các cột từ DataGridView
-                foreach (DataGridViewColumn col in dataGridView_danhsachnhanvien.Columns)
-                {
-                    dt.Columns.Add(col.HeaderText);
-                }
-
-                // Thêm dữ liệu từ DataGridView vào DataTable
-                foreach (DataGridViewRow row in dataGridView_danhsachnhanvien.Rows)
-                {
-                    if (!row.IsNewRow)
-                    {
-                        DataRow dr = dt.NewRow();
-                        for (int j = 0; j < dataGridView_danhsachnhanvien.Columns.Count; j++)
-                        {
-                            dr[j] = row.Cells[j].Value?.ToString() ?? "";
-                        }
-                        dt.Rows.Add(dr);
-                    }
-                }
-
-                // Thêm DataTable vào file Excel
-                wb.Worksheets.Add(dt, "DanhSachNhanVien");
-                wb.SaveAs(filePath);
-            }
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ThemTaiKhoan formThemTaiKhoan = new ThemTaiKhoan();
+            formThemTaiKhoan.ShowDialog();
+        }
+        private void dataGridView_danhsachnhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

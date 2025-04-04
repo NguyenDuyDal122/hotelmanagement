@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HotelManagement
 {
     public partial class ThemPhong : Form
     {
-        private string connectionString = @"Data Source=LAPTOP-CGUI40EU\MAY1;Initial Catalog=HotelManagement;Integrated Security=True;Encrypt=False";
+        private ThemPhongBLL roomBLL = new ThemPhongBLL();
+
         public ThemPhong()
         {
             InitializeComponent();
             this.Load += new System.EventHandler(this.ThemPhong_Load);
         }
+
         private void ThemPhong_Load(object sender, EventArgs e)
         {
             LoadDataToComboBox();
@@ -28,7 +24,6 @@ namespace HotelManagement
         {
             this.Close();
         }
-
         private void txt_maxroom_TextChanged(object sender, EventArgs e)
         {
 
@@ -51,7 +46,7 @@ namespace HotelManagement
 
         private void LoadDataToComboBox()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-CGUI40EU\MAY1;Initial Catalog=HotelManagement;Integrated Security=True;Encrypt=False"))
             {
                 try
                 {
@@ -104,71 +99,38 @@ namespace HotelManagement
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            // Kiểm tra số phòng có trùng không
+            if (roomBLL.IsRoomNumberExists(roomNumber))
             {
-                try
-                {
-                    conn.Open();
+                MessageBox.Show("Số phòng đã tồn tại, vui lòng nhập số khác!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                    // Kiểm tra xem số phòng có bị trùng không
-                    string checkQuery = "SELECT COUNT(*) FROM Room WHERE room_number = @room_number";
-                    SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
-                    checkCmd.Parameters.AddWithValue("@room_number", roomNumber);
-                    int count = (int)checkCmd.ExecuteScalar();
+            // Kiểm tra số lượng phòng trên tầng
+            if (roomBLL.IsRoomLimitReached(floorId))
+            {
+                MessageBox.Show("Số lượng phòng trên tầng đã đạt tối đa, không thể thêm phòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Số phòng đã tồn tại, vui lòng nhập số khác!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+            // Tạo đối tượng DTO và thêm phòng vào cơ sở dữ liệu
+            ThemPhongDTO roomDTO = new ThemPhongDTO
+            {
+                RoomNumber = roomNumber,
+                TypeId = typeId,
+                FloorId = floorId,
+                Status = status
+            };
 
-                    // Kiểm tra số lượng phòng trên tầng hiện tại
-                    string countRoomQuery = "SELECT COUNT(*) FROM Room WHERE floor_id = @floor_id";
-                    SqlCommand countRoomCmd = new SqlCommand(countRoomQuery, conn);
-                    countRoomCmd.Parameters.AddWithValue("@floor_id", floorId);
-                    int currentRooms = (int)countRoomCmd.ExecuteScalar();
-
-                    // Lấy max_rooms của tầng
-                    string maxRoomQuery = "SELECT max_rooms FROM Floor WHERE id = @floor_id";
-                    SqlCommand maxRoomCmd = new SqlCommand(maxRoomQuery, conn);
-                    maxRoomCmd.Parameters.AddWithValue("@floor_id", floorId);
-                    int maxRooms = (int)maxRoomCmd.ExecuteScalar();
-
-                    // Kiểm tra nếu số phòng hiện tại đã đạt max_rooms
-                    if (currentRooms >= maxRooms)
-                    {
-                        MessageBox.Show("Số lượng phòng trên tầng đã đạt tối đa, không thể thêm phòng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    // Thêm phòng vào database
-                    string insertQuery = @"
-                INSERT INTO Room (room_number, type_id, floor_id, status) 
-                VALUES (@room_number, @type_id, @floor_id, @status)";
-
-                    SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
-                    insertCmd.Parameters.AddWithValue("@room_number", roomNumber);
-                    insertCmd.Parameters.AddWithValue("@type_id", typeId);
-                    insertCmd.Parameters.AddWithValue("@floor_id", floorId);
-                    insertCmd.Parameters.AddWithValue("@status", status);
-
-                    int rowsAffected = insertCmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Thêm phòng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ClearFields(); // Xóa nội dung nhập sau khi thêm thành công
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thêm phòng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi thêm phòng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            if (roomBLL.AddRoom(roomDTO))
+            {
+                MessageBox.Show("Thêm phòng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields(); // Xóa nội dung nhập sau khi thêm thành công
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Thêm phòng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -180,6 +142,5 @@ namespace HotelManagement
             comboBox_tang.SelectedIndex = 0;
             comboBox_trangthai.SelectedIndex = 0;
         }
-
     }
 }

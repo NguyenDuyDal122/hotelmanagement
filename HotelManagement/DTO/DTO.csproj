@@ -44,10 +44,14 @@
     <Compile Include="DoiMatKhauDTO.cs" />
     <Compile Include="LoginDTO.cs" />
     <Compile Include="ManageCustomerDTO.cs" />
+    <Compile Include="ManageFloorDTO.cs" />
+    <Compile Include="ManageRoomDTO.cs" />
     <Compile Include="ManageStaffDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuaPhongDTO.cs" />
     <Compile Include="SuaTaiKhoanDTO.cs" />
     <Compile Include="ThemKhachHangDTO.cs" />
+    <Compile Include="ThemPhongDTO.cs" />
     <Compile Include="ThemTaiKhoanDTO.cs" />
     <Compile Include="ThongTinCaNhanDTO.cs" />
   </ItemGroup>

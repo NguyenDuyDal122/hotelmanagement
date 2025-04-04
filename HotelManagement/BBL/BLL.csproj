@@ -44,11 +44,15 @@
     <Compile Include="DoiMatKhauBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="ManageCustomerBLL.cs" />
+    <Compile Include="ManageFloorBLL.cs" />
+    <Compile Include="ManageRoomBLL.cs" />
     <Compile Include="ManageStaffBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuaKhachHangBLL.cs" />
+    <Compile Include="SuaPhongBBL.cs" />
     <Compile Include="SuaTaiKhoanBLL.cs" />
     <Compile Include="ThemKhachHangBLL.cs" />
+    <Compile Include="ThemPhongBLL.cs" />
     <Compile Include="ThemTaiKhoanBLL.cs" />
     <Compile Include="ThongTinCaNhanBLL.cs" />
   </ItemGroup>

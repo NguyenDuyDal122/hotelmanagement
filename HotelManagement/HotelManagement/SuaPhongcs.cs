@@ -1,21 +1,19 @@
-﻿using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using System;
 
 namespace HotelManagement
 {
     public partial class SuaPhongcs : Form
     {
-        private string connectionString = @"Data Source=LAPTOP-CGUI40EU\MAY1;Initial Catalog=HotelManagement;Integrated Security=True;Encrypt=False";
+        private SuaPhongBLL roomBLL = new SuaPhongBLL();
         private int roomId;
+
         public SuaPhongcs(int roomId)
         {
             InitializeComponent();
             this.roomId = roomId;
             LoadRoomDetails();
         }
-
         private void txt_sophong_TextChanged(object sender, EventArgs e)
         {
 
@@ -38,59 +36,39 @@ namespace HotelManagement
 
         private void LoadRoomDetails()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            // Load dữ liệu cho các combobox
+            comboBox_loaiphong.DataSource = roomBLL.LoadRoomTypes();
+            comboBox_loaiphong.DisplayMember = "type_name";
+            comboBox_loaiphong.ValueMember = "id";
+
+            comboBox_tang.DataSource = roomBLL.LoadFloors();
+            comboBox_tang.DisplayMember = "description";
+            comboBox_tang.ValueMember = "id";
+
+            // Nạp dữ liệu trạng thái vào comboBox_trangthai
+            comboBox_trangthai.Items.Clear();
+            comboBox_trangthai.Items.Add("available");
+            comboBox_trangthai.Items.Add("occupied");
+            comboBox_trangthai.Items.Add("maintenance");
+
+            // Lấy thông tin phòng cần sửa
+            SuaPhongDTO room = roomBLL.LoadRoomDetails(roomId);
+            if (room != null)
             {
-                try
+                txt_sophong.Text = room.RoomNumber;
+                comboBox_loaiphong.SelectedValue = room.RoomTypeId;
+                comboBox_tang.SelectedValue = room.FloorId;
+
+                // Đảm bảo comboBox_trangthai có giá trị tương ứng
+                if (comboBox_trangthai.Items.Contains(room.Status))
                 {
-                    conn.Open();
-
-                    // Nạp dữ liệu vào combobox loại phòng
-                    string queryRoomType = "SELECT id, type_name FROM RoomType";
-                    SqlDataAdapter daRoomType = new SqlDataAdapter(queryRoomType, conn);
-                    DataTable dtRoomType = new DataTable();
-                    daRoomType.Fill(dtRoomType);
-                    comboBox_loaiphong.DataSource = dtRoomType;
-                    comboBox_loaiphong.DisplayMember = "type_name";
-                    comboBox_loaiphong.ValueMember = "id";
-
-                    // Nạp dữ liệu vào combobox tầng
-                    string queryFloor = "SELECT id, description FROM Floor";
-                    SqlDataAdapter daFloor = new SqlDataAdapter(queryFloor, conn);
-                    DataTable dtFloor = new DataTable();
-                    daFloor.Fill(dtFloor);
-                    comboBox_tang.DataSource = dtFloor;
-                    comboBox_tang.DisplayMember = "description";
-                    comboBox_tang.ValueMember = "id";
-
-                    // Lấy thông tin phòng cần sửa
-                    string query = @"
-                SELECT room_number, type_id, floor_id, status
-                FROM Room
-                WHERE id = @roomId";
-
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@roomId", roomId);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        txt_sophong.Text = reader["room_number"].ToString();
-                        comboBox_loaiphong.SelectedValue = Convert.ToInt32(reader["type_id"]);
-                        comboBox_tang.SelectedValue = Convert.ToInt32(reader["floor_id"]);
-                        comboBox_trangthai.Text = reader["status"].ToString();
-                    }
-                    reader.Close();
+                    comboBox_trangthai.SelectedItem = room.Status;
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Lỗi khi tải thông tin phòng: " + ex.Message);
+                    comboBox_trangthai.SelectedIndex = 0; // fallback nếu giá trị không khớp
                 }
             }
-        }
-
-        private void btn__Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
@@ -106,54 +84,38 @@ namespace HotelManagement
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            // Kiểm tra xem số phòng có bị trùng không
+            if (roomBLL.CheckRoomNumberExists(roomId, roomNumber))
             {
-                try
-                {
-                    conn.Open();
-
-                    // Kiểm tra xem số phòng có bị trùng không (trừ phòng hiện tại)
-                    string checkQuery = "SELECT COUNT(*) FROM Room WHERE room_number = @roomNumber AND id != @roomId";
-                    SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
-                    checkCmd.Parameters.AddWithValue("@roomNumber", roomNumber);
-                    checkCmd.Parameters.AddWithValue("@roomId", roomId);
-
-                    int count = (int)checkCmd.ExecuteScalar();
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Số phòng này đã tồn tại. Vui lòng nhập số khác!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    // Cập nhật thông tin phòng
-                    string updateQuery = @"
-                UPDATE Room
-                SET room_number = @roomNumber, type_id = @roomTypeId, floor_id = @floorId, status = @status
-                WHERE id = @roomId";
-
-                    SqlCommand cmd = new SqlCommand(updateQuery, conn);
-                    cmd.Parameters.AddWithValue("@roomNumber", roomNumber);
-                    cmd.Parameters.AddWithValue("@roomTypeId", roomTypeId);
-                    cmd.Parameters.AddWithValue("@floorId", floorId);
-                    cmd.Parameters.AddWithValue("@status", status);
-                    cmd.Parameters.AddWithValue("@roomId", roomId);
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Cập nhật phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close(); // Đóng form sau khi cập nhật thành công
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cập nhật thất bại, vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi cập nhật phòng: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Số phòng này đã tồn tại. Vui lòng nhập số khác!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            // Kiểm tra nếu tầng đã đầy thì không cho sửa
+            if (roomBLL.IsFloorFull(floorId, roomId))
+            {
+                MessageBox.Show("Tầng đã đủ số lượng phòng tối đa. Không thể chuyển phòng này sang tầng đó!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tạo đối tượng SuaPhongDTO
+            SuaPhongDTO room = new SuaPhongDTO(roomId, roomNumber, roomTypeId, floorId, status);
+
+            // Cập nhật phòng
+            if (roomBLL.UpdateRoom(room))
+            {
+                MessageBox.Show("Cập nhật phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close(); // Đóng form sau khi cập nhật thành công
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại, vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn__Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
