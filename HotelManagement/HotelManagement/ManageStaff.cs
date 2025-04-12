@@ -76,14 +76,21 @@ namespace HotelManagement
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    if (staffBLL.DeleteStaff(id))
+                    try
                     {
-                        MessageBox.Show("Xóa nhân viên thành công!", "Thông báo");
-                        LoadStaffList();
+                        if (staffBLL.DeleteStaff(id))
+                        {
+                            MessageBox.Show("Xóa nhân viên thành công!", "Thông báo");
+                            LoadStaffList();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa thất bại!", "Lỗi");
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Xóa thất bại!", "Lỗi");
+                        MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

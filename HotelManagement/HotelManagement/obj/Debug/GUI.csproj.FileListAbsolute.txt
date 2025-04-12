@@ -56,3 +56,4 @@ D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\System.Runtime.Comp
 D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\GUI.csproj.Up2Date
 D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\BBL.dll.config
 D:\hotelmanagement\HotelManagement\HotelManagement\bin\Debug\DAL.dll.config
+D:\hotelmanagement\HotelManagement\HotelManagement\obj\Debug\HotelManagement.ManageService.resources

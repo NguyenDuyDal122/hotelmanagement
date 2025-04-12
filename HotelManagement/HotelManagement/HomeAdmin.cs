@@ -66,5 +66,11 @@ namespace HotelManagement
             ManageRoom manageRoomForm = new ManageRoom();
             manageRoomForm.ShowDialog();
         }
+
+        private void btn_qldichvu_Click(object sender, EventArgs e)
+        {
+            ManageService manageServiceForm = new ManageService();
+            manageServiceForm.ShowDialog();
+        }
     }
 }

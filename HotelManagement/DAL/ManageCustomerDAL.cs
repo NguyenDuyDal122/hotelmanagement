@@ -110,12 +110,27 @@ namespace HotelManagement
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "DELETE FROM [Customer] WHERE id = @id";
 
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    // Kiểm tra xem khách hàng có đang có bản ghi Booking nào không
+                    string checkQuery = "SELECT COUNT(*) FROM Booking WHERE customer_id = @id";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                        checkCmd.Parameters.AddWithValue("@id", id);
+                        int bookingCount = (int)checkCmd.ExecuteScalar();
+
+                        if (bookingCount > 0)
+                        {
+                            // Khách hàng đang có đặt phòng, không được phép xóa
+                            throw new Exception("Không thể xóa khách hàng vì họ đang có đặt phòng!");
+                        }
+                    }
+
+                    // Nếu không có booking, thực hiện xóa
+                    string deleteQuery = "DELETE FROM [Customer] WHERE id = @id";
+                    using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn))
+                    {
+                        deleteCmd.Parameters.AddWithValue("@id", id);
+                        int rowsAffected = deleteCmd.ExecuteNonQuery();
                         return rowsAffected > 0;
                     }
                 }

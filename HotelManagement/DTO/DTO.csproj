@@ -46,6 +46,7 @@
     <Compile Include="ManageCustomerDTO.cs" />
     <Compile Include="ManageFloorDTO.cs" />
     <Compile Include="ManageRoomDTO.cs" />
+    <Compile Include="ManageServiceDTO.cs" />
     <Compile Include="ManageStaffDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuaPhongDTO.cs" />

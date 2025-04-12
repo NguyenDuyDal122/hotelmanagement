@@ -84,6 +84,7 @@
     <Compile Include="ManageCustomerDAL.cs" />
     <Compile Include="ManageFloorDAL.cs" />
     <Compile Include="ManageRoomDAL.cs" />
+    <Compile Include="ManageServiceDAL.cs" />
     <Compile Include="ManageStaffDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuaKhachHangDAL.cs" />

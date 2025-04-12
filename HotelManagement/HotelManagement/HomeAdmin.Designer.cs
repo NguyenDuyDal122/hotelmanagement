@@ -123,6 +123,7 @@
             this.btn_qldichvu.TabIndex = 7;
             this.btn_qldichvu.Text = "Quản lý dịch vụ";
             this.btn_qldichvu.UseVisualStyleBackColor = false;
+            this.btn_qldichvu.Click += new System.EventHandler(this.btn_qldichvu_Click);
             // 
             // btn_qlhoadon
             // 

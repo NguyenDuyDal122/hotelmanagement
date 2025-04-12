@@ -126,6 +126,12 @@
     <Compile Include="ManageRoom.Designer.cs">
       <DependentUpon>ManageRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageService.Designer.cs">
+      <DependentUpon>ManageService.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManageRoom.resx">
       <DependentUpon>ManageRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageService.resx">
+      <DependentUpon>ManageService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageStaff.resx">
       <DependentUpon>ManageStaff.cs</DependentUpon>

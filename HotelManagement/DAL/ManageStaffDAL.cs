@@ -129,10 +129,26 @@ namespace HotelManagement
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
+
+                // Kiểm tra xem nhân viên có được phân công trong bảng Booking không
+                string checkQuery = "SELECT COUNT(*) FROM Booking WHERE staff_id = @id";
+                using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                {
+                    checkCmd.Parameters.AddWithValue("@id", id);
+                    int count = (int)checkCmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        throw new Exception("Không thể xóa nhân viên vì nhân viên đang phụ trách đơn đặt phòng!");
+                    }
+                }
+
                 string query = "DELETE FROM [User] WHERE id = @id";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id", id);
-                return cmd.ExecuteNonQuery() > 0;
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
             }
         }
     }
