@@ -51,13 +51,15 @@ namespace HotelManagement
                 conn.Open();
 
                 string insertQuery = @"
-                    INSERT INTO Room (room_number, type_id, floor_id, status) 
-                    VALUES (@room_number, @type_id, @floor_id, @status)";
+                    INSERT INTO Room (room_number, type_id, floor_id, price_per_day, price_per_hour, status) 
+                    VALUES (@room_number, @type_id, @floor_id, @price_per_day, @price_per_hour, @status)";
 
                 SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
                 insertCmd.Parameters.AddWithValue("@room_number", roomDTO.RoomNumber);
                 insertCmd.Parameters.AddWithValue("@type_id", roomDTO.TypeId);
                 insertCmd.Parameters.AddWithValue("@floor_id", roomDTO.FloorId);
+                insertCmd.Parameters.AddWithValue("@price_per_day", roomDTO.PricePerDay);
+                insertCmd.Parameters.AddWithValue("@price_per_hour", roomDTO.PricePerHour);
                 insertCmd.Parameters.AddWithValue("@status", roomDTO.Status);
 
                 int rowsAffected = insertCmd.ExecuteNonQuery();

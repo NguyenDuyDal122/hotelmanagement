@@ -91,6 +91,19 @@ namespace HotelManagement
             int typeId = Convert.ToInt32(comboBox_loaiphong.SelectedValue);
             int floorId = Convert.ToInt32(comboBox_tang.SelectedValue);
             string status = comboBox_trangthai.SelectedItem.ToString();
+            decimal pricePerDay, pricePerHour;
+
+            if (!decimal.TryParse(txt_giatheongay.Text.Trim(), out pricePerDay) || pricePerDay < 0)
+            {
+                MessageBox.Show("Vui lòng nhập giá theo ngày hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!decimal.TryParse(txt_giatheogio.Text.Trim(), out pricePerHour) || pricePerHour < 0)
+            {
+                MessageBox.Show("Vui lòng nhập giá theo giờ hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             // Kiểm tra dữ liệu đầu vào
             if (string.IsNullOrEmpty(roomNumber))
@@ -119,6 +132,8 @@ namespace HotelManagement
                 RoomNumber = roomNumber,
                 TypeId = typeId,
                 FloorId = floorId,
+                PricePerDay = pricePerDay,
+                PricePerHour = pricePerHour,
                 Status = status
             };
 
@@ -138,6 +153,8 @@ namespace HotelManagement
         private void ClearFields()
         {
             txt_sophong.Clear();
+            txt_giatheongay.Clear();
+            txt_giatheogio.Clear();
             comboBox_loaiphong.SelectedIndex = 0;
             comboBox_tang.SelectedIndex = 0;
             comboBox_trangthai.SelectedIndex = 0;

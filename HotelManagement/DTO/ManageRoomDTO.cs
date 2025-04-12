@@ -7,5 +7,7 @@
         public string TypeName { get; set; }
         public string FloorName { get; set; }
         public string Status { get; set; }
+        public decimal PricePerDay { get; set; }
+        public decimal PricePerHour { get; set; }
     }
 }

@@ -6,5 +6,7 @@
         public int TypeId { get; set; }
         public int FloorId { get; set; }
         public string Status { get; set; }
+        public decimal PricePerDay { get; set; }
+        public decimal PricePerHour { get; set; }
     }
 }

@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\hotelmanagement\\HotelManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\suaphongcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\suaphongcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\suaphongcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\suaphongcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|d:\\hotelmanagement\\hotelmanagement\\dal\\suaphongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\suaphongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|d:\\hotelmanagement\\hotelmanagement\\dto\\suaphongdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|solutionrelative:dto\\suaphongdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|d:\\hotelmanagement\\hotelmanagement\\bbl\\suaphongbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|solutionrelative:bbl\\suaphongbbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,18 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeAdmin.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HomeAdmin.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\HomeAdmin.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HomeAdmin.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\HomeAdmin.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "SuaPhongBBL.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\BBL\\SuaPhongBBL.cs",
+              "RelativeDocumentMoniker": "BBL\\SuaPhongBBL.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\BBL\\SuaPhongBBL.cs",
+              "RelativeToolTip": "BBL\\SuaPhongBBL.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAYwCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T15:35:31.439Z",
+              "WhenOpened": "2025-04-12T06:25:26.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SuaPhongDAL.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DAL\\SuaPhongDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\SuaPhongDAL.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DAL\\SuaPhongDAL.cs",
+              "RelativeToolTip": "DAL\\SuaPhongDAL.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAwwGAAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T06:25:23.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SuaPhongDTO.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DTO\\SuaPhongDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\SuaPhongDTO.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DTO\\SuaPhongDTO.cs",
+              "RelativeToolTip": "DTO\\SuaPhongDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T06:25:20.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SuaPhongcs.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaPhongcs.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\SuaPhongcs.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaPhongcs.cs",
+              "RelativeToolTip": "HotelManagement\\SuaPhongcs.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAgwBEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T06:25:14.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SuaPhongcs.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaPhongcs.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\SuaPhongcs.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\SuaPhongcs.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\SuaPhongcs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T06:25:10.356Z",
               "EditorCaption": " [Design]"
             }
           ]

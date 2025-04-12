@@ -40,6 +40,10 @@
             this.comboBox_loaiphong = new System.Windows.Forms.ComboBox();
             this.comboBox_tang = new System.Windows.Forms.ComboBox();
             this.comboBox_trangthai = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_giatheongay = new System.Windows.Forms.TextBox();
+            this.txt_giatheogio = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +82,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(125, 154);
+            this.label3.Location = new System.Drawing.Point(125, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 25);
             this.label3.TabIndex = 21;
@@ -89,7 +93,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(125, 237);
+            this.label4.Location = new System.Drawing.Point(125, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 25);
             this.label4.TabIndex = 22;
@@ -100,7 +104,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(122, 313);
+            this.label5.Location = new System.Drawing.Point(122, 375);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 25);
             this.label5.TabIndex = 23;
@@ -110,7 +114,7 @@
             // 
             this.btn_them.BackColor = System.Drawing.Color.Gray;
             this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(204, 384);
+            this.btn_them.Location = new System.Drawing.Point(206, 429);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(102, 46);
             this.btn_them.TabIndex = 27;
@@ -122,7 +126,7 @@
             // 
             this.btn_.BackColor = System.Drawing.Color.Gray;
             this.btn_.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_.Location = new System.Drawing.Point(339, 384);
+            this.btn_.Location = new System.Drawing.Point(344, 429);
             this.btn_.Name = "btn_";
             this.btn_.Size = new System.Drawing.Size(102, 46);
             this.btn_.TabIndex = 28;
@@ -133,7 +137,7 @@
             // comboBox_loaiphong
             // 
             this.comboBox_loaiphong.FormattingEnabled = true;
-            this.comboBox_loaiphong.Location = new System.Drawing.Point(241, 158);
+            this.comboBox_loaiphong.Location = new System.Drawing.Point(241, 145);
             this.comboBox_loaiphong.Name = "comboBox_loaiphong";
             this.comboBox_loaiphong.Size = new System.Drawing.Size(275, 24);
             this.comboBox_loaiphong.TabIndex = 29;
@@ -142,7 +146,7 @@
             // comboBox_tang
             // 
             this.comboBox_tang.FormattingEnabled = true;
-            this.comboBox_tang.Location = new System.Drawing.Point(241, 241);
+            this.comboBox_tang.Location = new System.Drawing.Point(241, 207);
             this.comboBox_tang.Name = "comboBox_tang";
             this.comboBox_tang.Size = new System.Drawing.Size(275, 24);
             this.comboBox_tang.TabIndex = 30;
@@ -151,11 +155,47 @@
             // comboBox_trangthai
             // 
             this.comboBox_trangthai.FormattingEnabled = true;
-            this.comboBox_trangthai.Location = new System.Drawing.Point(241, 313);
+            this.comboBox_trangthai.Location = new System.Drawing.Point(241, 379);
             this.comboBox_trangthai.Name = "comboBox_trangthai";
             this.comboBox_trangthai.Size = new System.Drawing.Size(275, 24);
             this.comboBox_trangthai.TabIndex = 31;
             this.comboBox_trangthai.SelectedIndexChanged += new System.EventHandler(this.comboBox_trangthai_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(125, 261);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 25);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Giá ngày:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(122, 315);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 25);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Giá giờ:";
+            // 
+            // txt_giatheongay
+            // 
+            this.txt_giatheongay.Location = new System.Drawing.Point(241, 261);
+            this.txt_giatheongay.Name = "txt_giatheongay";
+            this.txt_giatheongay.Size = new System.Drawing.Size(275, 22);
+            this.txt_giatheongay.TabIndex = 34;
+            // 
+            // txt_giatheogio
+            // 
+            this.txt_giatheogio.Location = new System.Drawing.Point(241, 319);
+            this.txt_giatheogio.Name = "txt_giatheogio";
+            this.txt_giatheogio.Size = new System.Drawing.Size(275, 22);
+            this.txt_giatheogio.TabIndex = 35;
             // 
             // ThemPhong
             // 
@@ -163,6 +203,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(663, 508);
+            this.Controls.Add(this.txt_giatheogio);
+            this.Controls.Add(this.txt_giatheongay);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox_trangthai);
             this.Controls.Add(this.comboBox_tang);
             this.Controls.Add(this.comboBox_loaiphong);
@@ -199,5 +243,9 @@
         private System.Windows.Forms.ComboBox comboBox_loaiphong;
         private System.Windows.Forms.ComboBox comboBox_tang;
         private System.Windows.Forms.ComboBox comboBox_trangthai;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_giatheongay;
+        private System.Windows.Forms.TextBox txt_giatheogio;
     }
 }

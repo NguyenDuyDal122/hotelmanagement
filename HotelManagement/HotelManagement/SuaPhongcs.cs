@@ -68,6 +68,8 @@ namespace HotelManagement
                 {
                     comboBox_trangthai.SelectedIndex = 0; // fallback nếu giá trị không khớp
                 }
+                txt_giangay.Text = room.PricePerDay.ToString("0.00");
+                txt_giagio.Text = room.PricePerHour.ToString("0.00");
             }
         }
 
@@ -77,6 +79,13 @@ namespace HotelManagement
             int roomTypeId = Convert.ToInt32(comboBox_loaiphong.SelectedValue);
             int floorId = Convert.ToInt32(comboBox_tang.SelectedValue);
             string status = comboBox_trangthai.Text;
+            decimal pricePerDay, pricePerHour;
+
+            if (!decimal.TryParse(txt_giangay.Text, out pricePerDay) || !decimal.TryParse(txt_giagio.Text, out pricePerHour))
+            {
+                MessageBox.Show("Giá phải là số hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (string.IsNullOrEmpty(roomNumber))
             {
@@ -99,7 +108,7 @@ namespace HotelManagement
             }
 
             // Tạo đối tượng SuaPhongDTO
-            SuaPhongDTO room = new SuaPhongDTO(roomId, roomNumber, roomTypeId, floorId, status);
+            SuaPhongDTO room = new SuaPhongDTO(roomId, roomNumber, roomTypeId, floorId, status, pricePerDay, pricePerHour);
 
             // Cập nhật phòng
             if (roomBLL.UpdateRoom(room))

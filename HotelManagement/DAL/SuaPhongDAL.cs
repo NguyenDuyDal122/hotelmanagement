@@ -36,7 +36,7 @@ namespace HotelManagement
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string query = "SELECT room_number, type_id, floor_id, status FROM Room WHERE id = @roomId";
+                string query = "SELECT room_number, type_id, floor_id, status, price_per_day, price_per_hour FROM Room WHERE id = @roomId";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@roomId", roomId);
                 conn.Open();
@@ -49,7 +49,9 @@ namespace HotelManagement
                         reader["room_number"].ToString(),
                         Convert.ToInt32(reader["type_id"]),
                         Convert.ToInt32(reader["floor_id"]),
-                        reader["status"].ToString()
+                        reader["status"].ToString(),
+                        Convert.ToDecimal(reader["price_per_day"]),
+                        Convert.ToDecimal(reader["price_per_hour"])
                     );
                 }
                 return null;
@@ -77,7 +79,12 @@ namespace HotelManagement
             {
                 string query = @"
                     UPDATE Room
-                    SET room_number = @roomNumber, type_id = @roomTypeId, floor_id = @floorId, status = @status
+                    SET room_number = @roomNumber,
+                        type_id = @roomTypeId,
+                        floor_id = @floorId,
+                        status = @status,
+                        price_per_day = @pricePerDay,
+                        price_per_hour = @pricePerHour
                     WHERE id = @roomId";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -86,6 +93,8 @@ namespace HotelManagement
                 cmd.Parameters.AddWithValue("@floorId", room.FloorId);
                 cmd.Parameters.AddWithValue("@status", room.Status);
                 cmd.Parameters.AddWithValue("@roomId", room.RoomId);
+                cmd.Parameters.AddWithValue("@pricePerDay", room.PricePerDay);
+                cmd.Parameters.AddWithValue("@pricePerHour", room.PricePerHour);
 
                 conn.Open();
                 int rowsAffected = cmd.ExecuteNonQuery();

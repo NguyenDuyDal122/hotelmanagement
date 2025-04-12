@@ -16,7 +16,9 @@ namespace HotelManagement
                 {
                     conn.Open();
                     string query = @"
-                        SELECT Room.id, Room.room_number, RoomType.type_name, Floor.description AS floor_name, Room.status
+                        SELECT Room.id, Room.room_number, RoomType.type_name, 
+                        Floor.description AS floor_name, Room.status, 
+                        Room.price_per_day, Room.price_per_hour
                         FROM Room
                         INNER JOIN RoomType ON Room.type_id = RoomType.id
                         INNER JOIN Floor ON Room.floor_id = Floor.id";
@@ -40,7 +42,9 @@ namespace HotelManagement
                 {
                     conn.Open();
                     string query = @"
-                        SELECT Room.id, Room.room_number, RoomType.type_name, Floor.description AS floor_name, Room.status
+                        SELECT Room.id, Room.room_number, RoomType.type_name, 
+                        Floor.description AS floor_name, Room.status, 
+                        Room.price_per_day, Room.price_per_hour
                         FROM Room
                         INNER JOIN RoomType ON Room.type_id = RoomType.id
                         INNER JOIN Floor ON Room.floor_id = Floor.id
@@ -67,7 +71,7 @@ namespace HotelManagement
                 {
                     conn.Open();
                     // Kiểm tra xem phòng có đang được sử dụng trong bảng khác không
-                    string checkQuery = "SELECT COUNT(*) FROM Booking WHERE room_id = @roomId";
+                    string checkQuery = "SELECT COUNT(*) FROM BookingDetail WHERE room_id = @roomId";
                     SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
                     checkCmd.Parameters.AddWithValue("@roomId", roomId);
                     int count = (int)checkCmd.ExecuteScalar();
