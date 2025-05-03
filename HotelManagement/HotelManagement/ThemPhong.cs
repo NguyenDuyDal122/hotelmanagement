@@ -39,11 +39,6 @@ namespace HotelManagement
 
         }
 
-        private void comboBox_trangthai_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void LoadDataToComboBox()
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-CGUI40EU\MAY1;Initial Catalog=HotelManagement;Integrated Security=True;Encrypt=False"))
@@ -69,13 +64,6 @@ namespace HotelManagement
                     comboBox_tang.DataSource = dtFloor;
                     comboBox_tang.DisplayMember = "description";
                     comboBox_tang.ValueMember = "id";
-
-                    // Load danh sách trạng thái
-                    comboBox_trangthai.Items.Clear();
-                    comboBox_trangthai.Items.Add("available");
-                    comboBox_trangthai.Items.Add("occupied");
-                    comboBox_trangthai.Items.Add("maintenance");
-                    comboBox_trangthai.SelectedIndex = 0; // Mặc định chọn "available"
                 }
                 catch (Exception ex)
                 {
@@ -90,7 +78,6 @@ namespace HotelManagement
             string roomNumber = txt_sophong.Text.Trim();
             int typeId = Convert.ToInt32(comboBox_loaiphong.SelectedValue);
             int floorId = Convert.ToInt32(comboBox_tang.SelectedValue);
-            string status = comboBox_trangthai.SelectedItem.ToString();
             decimal pricePerDay, pricePerHour;
 
             if (!decimal.TryParse(txt_giatheongay.Text.Trim(), out pricePerDay) || pricePerDay < 0)
@@ -134,7 +121,7 @@ namespace HotelManagement
                 FloorId = floorId,
                 PricePerDay = pricePerDay,
                 PricePerHour = pricePerHour,
-                Status = status
+                Status = "available"
             };
 
             if (roomBLL.AddRoom(roomDTO))
@@ -157,7 +144,6 @@ namespace HotelManagement
             txt_giatheogio.Clear();
             comboBox_loaiphong.SelectedIndex = 0;
             comboBox_tang.SelectedIndex = 0;
-            comboBox_trangthai.SelectedIndex = 0;
         }
     }
 }

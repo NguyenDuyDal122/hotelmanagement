@@ -135,6 +135,7 @@
             this.btn_qlhoadon.TabIndex = 8;
             this.btn_qlhoadon.Text = "Quản lý hóa đơn";
             this.btn_qlhoadon.UseVisualStyleBackColor = false;
+            this.btn_qlhoadon.Click += new System.EventHandler(this.btn_qlhoadon_Click);
             // 
             // btn_thongke
             // 
@@ -146,6 +147,7 @@
             this.btn_thongke.TabIndex = 9;
             this.btn_thongke.Text = "Thống kê doanh thu";
             this.btn_thongke.UseVisualStyleBackColor = false;
+            this.btn_thongke.Click += new System.EventHandler(this.btn_thongke_Click);
             // 
             // btn_dangxuat
             // 
@@ -222,9 +224,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::HotelManagement.Properties.Resources.black_bedroom_01_decox1;
-            this.pictureBox4.Location = new System.Drawing.Point(322, 152);
+            this.pictureBox4.Location = new System.Drawing.Point(322, 146);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(833, 688);
+            this.pictureBox4.Size = new System.Drawing.Size(833, 725);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
@@ -262,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(1156, 1033);
+            this.ClientSize = new System.Drawing.Size(1155, 860);
             this.Controls.Add(this.btn_qltang);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -288,6 +291,7 @@
             this.Name = "HomeAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ Thống Quản Lý Khách Sạn Sky";
+            this.Load += new System.EventHandler(this.HomeAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

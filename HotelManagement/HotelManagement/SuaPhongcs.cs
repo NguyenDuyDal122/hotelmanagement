@@ -36,7 +36,6 @@ namespace HotelManagement
 
         private void LoadRoomDetails()
         {
-            // Load dữ liệu cho các combobox
             comboBox_loaiphong.DataSource = roomBLL.LoadRoomTypes();
             comboBox_loaiphong.DisplayMember = "type_name";
             comboBox_loaiphong.ValueMember = "id";
@@ -45,13 +44,10 @@ namespace HotelManagement
             comboBox_tang.DisplayMember = "description";
             comboBox_tang.ValueMember = "id";
 
-            // Nạp dữ liệu trạng thái vào comboBox_trangthai
             comboBox_trangthai.Items.Clear();
             comboBox_trangthai.Items.Add("available");
-            comboBox_trangthai.Items.Add("occupied");
             comboBox_trangthai.Items.Add("maintenance");
 
-            // Lấy thông tin phòng cần sửa
             SuaPhongDTO room = roomBLL.LoadRoomDetails(roomId);
             if (room != null)
             {
@@ -59,17 +55,32 @@ namespace HotelManagement
                 comboBox_loaiphong.SelectedValue = room.RoomTypeId;
                 comboBox_tang.SelectedValue = room.FloorId;
 
-                // Đảm bảo comboBox_trangthai có giá trị tương ứng
                 if (comboBox_trangthai.Items.Contains(room.Status))
                 {
                     comboBox_trangthai.SelectedItem = room.Status;
                 }
                 else
                 {
-                    comboBox_trangthai.SelectedIndex = 0; // fallback nếu giá trị không khớp
+                    comboBox_trangthai.SelectedIndex = 0;
                 }
+
                 txt_giangay.Text = room.PricePerDay.ToString("0.00");
                 txt_giagio.Text = room.PricePerHour.ToString("0.00");
+
+                // Kiểm tra trạng thái phòng
+                if (room.Status.ToLower() == "occupied")
+                {
+                    MessageBox.Show("Phòng đang có người ở. Không thể chỉnh sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    // Disable controls
+                    txt_sophong.Enabled = false;
+                    comboBox_loaiphong.Enabled = false;
+                    comboBox_tang.Enabled = false;
+                    comboBox_trangthai.Enabled = false;
+                    txt_giangay.Enabled = false;
+                    txt_giagio.Enabled = false;
+                    btn_sua.Enabled = false;
+                }
             }
         }
 

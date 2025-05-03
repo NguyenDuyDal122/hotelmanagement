@@ -1,5 +1,7 @@
-﻿using HotelManagement.DAL;
+﻿using HotelManagement.BLL;
+using HotelManagement.DAL;
 using HotelManagement.DTO;
+using System;
 using System.Collections.Generic;
 
 namespace HotelManagement
@@ -27,5 +29,13 @@ namespace HotelManagement
         {
             return dal.DeleteService(id);
         }
+        
+        public List<ServiceDTO> GetServicesByBookingId(int bookingId)
+        {
+            return dal.GetServicesByBookingId(bookingId);
+        }
+
+
+
     }
 }

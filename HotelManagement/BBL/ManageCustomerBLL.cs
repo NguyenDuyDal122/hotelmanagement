@@ -18,6 +18,7 @@ namespace HotelManagement
             return customerDAL.SearchCustomers(email, phone);
         }
 
+
         // Xóa khách hàng
         public bool DeleteCustomer(int id)
         {

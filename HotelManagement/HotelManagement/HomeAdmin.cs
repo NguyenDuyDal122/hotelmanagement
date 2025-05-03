@@ -72,5 +72,22 @@ namespace HotelManagement
             ManageService manageServiceForm = new ManageService();
             manageServiceForm.ShowDialog();
         }
+
+        private void HomeAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_qlhoadon_Click(object sender, EventArgs e)
+        {
+            HoaDon hoadon = new HoaDon();
+            hoadon.ShowDialog();
+        }
+
+        private void btn_thongke_Click(object sender, EventArgs e)
+        {
+            ThongKe thongke = new ThongKe();
+            thongke.ShowDialog();
+        }
     }
 }

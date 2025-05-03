@@ -1,0 +1,432 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\hotelmanagement\\tphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\tphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\hotelmanagement\\tphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\tphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dto\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|solutionrelative:dto\\bookingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\hotelmanagement\\homestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\homestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\suataikhoandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\suataikhoandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|c:\\users\\pc\\downloads\\qlksan\\qlks\\qlks\\qlks\\qlks\\hotelmanagement\\dal\\bookingdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\bookingdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\hotelmanagement\\thuephong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\thuephong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\hotelmanagement\\thuephong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\thuephong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\bbl\\bookingbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|solutionrelative:bbl\\bookingbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|c:\\users\\pc\\downloads\\qlksan\\qlks\\qlks\\qlks\\qlks\\hotelmanagement\\bbl\\loginbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|solutionrelative:bbl\\loginbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\logindal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\logindal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\doimatkhaudal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\doimatkhaudal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\managecustomerdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\managecustomerdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\managefloordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\managefloordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\manageroomdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\manageroomdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\manageservicedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\manageservicedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\managestaffdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\managestaffdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\suaphongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\suaphongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\themkhachhangdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\themkhachhangdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\themphongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\themphongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\themtaikhoandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\themtaikhoandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\dal\\thongtincanhandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\thongtincanhandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\hotelmanagement\\homestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\homestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\hotelmanagement\\traphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\traphong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\hotelmanagement\\traphong.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\traphong.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 18,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginBLL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\BBL\\LoginBLL.cs",
+              "RelativeDocumentMoniker": "BBL\\LoginBLL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\BBL\\LoginBLL.cs",
+              "RelativeToolTip": "BBL\\LoginBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T06:34:37.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ManageFloorDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageFloorDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ManageFloorDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageFloorDAL.cs",
+              "RelativeToolTip": "DAL\\ManageFloorDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:37:04.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ManageServiceDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageServiceDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ManageServiceDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageServiceDAL.cs",
+              "RelativeToolTip": "DAL\\ManageServiceDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T07:29:01.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ManageCustomerDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageCustomerDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ManageCustomerDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageCustomerDAL.cs",
+              "RelativeToolTip": "DAL\\ManageCustomerDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:34:35.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DoiMatKhauDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\DoiMatKhauDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\DoiMatKhauDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\DoiMatKhauDAL.cs",
+              "RelativeToolTip": "DAL\\DoiMatKhauDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:33:59.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\LoginDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\LoginDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\LoginDAL.cs",
+              "RelativeToolTip": "DAL\\LoginDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T04:09:26.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\BookingDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\BookingDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\BookingDAL.cs",
+              "RelativeToolTip": "DAL\\BookingDAL.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwFYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:31:26.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ManageStaffDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageStaffDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ManageStaffDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageStaffDAL.cs",
+              "RelativeToolTip": "DAL\\ManageStaffDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T08:14:16.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SuaPhongDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\SuaPhongDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\SuaPhongDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\SuaPhongDAL.cs",
+              "RelativeToolTip": "DAL\\SuaPhongDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T13:42:20.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SuaTaiKhoanDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\SuaTaiKhoanDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\SuaTaiKhoanDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\SuaTaiKhoanDAL.cs",
+              "RelativeToolTip": "DAL\\SuaTaiKhoanDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T03:25:16.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ManageRoomDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageRoomDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ManageRoomDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ManageRoomDAL.cs",
+              "RelativeToolTip": "DAL\\ManageRoomDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:34:29.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ThemKhachHangDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ThemKhachHangDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ThemKhachHangDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ThemKhachHangDAL.cs",
+              "RelativeToolTip": "DAL\\ThemKhachHangDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T03:25:24.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ThemPhongDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ThemPhongDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ThemPhongDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ThemPhongDAL.cs",
+              "RelativeToolTip": "DAL\\ThemPhongDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T03:25:29.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ThemTaiKhoanDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ThemTaiKhoanDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ThemTaiKhoanDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ThemTaiKhoanDAL.cs",
+              "RelativeToolTip": "DAL\\ThemTaiKhoanDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T03:24:13.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ThongTinCaNhanDAL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ThongTinCaNhanDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ThongTinCaNhanDAL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DAL\\ThongTinCaNhanDAL.cs",
+              "RelativeToolTip": "DAL\\ThongTinCaNhanDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:35:32.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookingDTO.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DTO\\BookingDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\BookingDTO.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\DTO\\BookingDTO.cs",
+              "RelativeToolTip": "DTO\\BookingDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:32:06.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeStaff.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\HomeStaff.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\HomeStaff.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\HomeStaff.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\HomeStaff.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T14:18:02.279Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TPhong.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\TPhong.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\TPhong.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\TPhong.cs [Design]*",
+              "RelativeToolTip": "HotelManagement\\TPhong.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:53:24.354Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TPhong.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\TPhong.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\TPhong.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\TPhong.cs*",
+              "RelativeToolTip": "HotelManagement\\TPhong.cs*",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAUwJAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:55:17.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HomeStaff.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\HomeStaff.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\HomeStaff.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\HomeStaff.cs",
+              "RelativeToolTip": "HotelManagement\\HomeStaff.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAIA5wCwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T15:44:55.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ThuePhong.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\ThuePhong.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ThuePhong.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\ThuePhong.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\ThuePhong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T05:31:09.021Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TraPhong.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\TraPhong.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\TraPhong.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\TraPhong.cs",
+              "RelativeToolTip": "HotelManagement\\TraPhong.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAADgvxMAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T13:29:55.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookingBLL.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\BBL\\BookingBLL.cs",
+              "RelativeDocumentMoniker": "BBL\\BookingBLL.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\BBL\\BookingBLL.cs",
+              "RelativeToolTip": "BBL\\BookingBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T03:44:54.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TraPhong.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\TraPhong.Designer.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\TraPhong.Designer.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\TraPhong.Designer.cs",
+              "RelativeToolTip": "HotelManagement\\TraPhong.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T06:52:22.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThuePhong.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\ThuePhong.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ThuePhong.cs",
+              "ToolTip": "C:\\Users\\PC\\Downloads\\QLKSan\\QLKS\\QLKS\\QLKS\\QLKS\\HotelManagement\\HotelManagement\\ThuePhong.cs",
+              "RelativeToolTip": "HotelManagement\\ThuePhong.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAuwAABAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T05:34:12.895Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

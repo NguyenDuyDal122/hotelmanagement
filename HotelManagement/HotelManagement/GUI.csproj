@@ -96,6 +96,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,17 +182,38 @@
     <Compile Include="ThemTaiKhoan.Designer.cs">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ThongTinCaNhan.Designer.cs">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThuePhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuePhong.Designer.cs">
+      <DependentUpon>ThuePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TPhong.Designer.cs">
+      <DependentUpon>TPhong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeAdmin.resx">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
@@ -239,6 +266,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinCaNhan.resx">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuePhong.resx">
+      <DependentUpon>ThuePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPhong.resx">
+      <DependentUpon>TPhong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -34,12 +34,10 @@
             this.txt_sophong = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_ = new System.Windows.Forms.Button();
             this.comboBox_loaiphong = new System.Windows.Forms.ComboBox();
             this.comboBox_tang = new System.Windows.Forms.ComboBox();
-            this.comboBox_trangthai = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_giatheongay = new System.Windows.Forms.TextBox();
@@ -99,22 +97,11 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "Tầng:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(122, 375);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 25);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Trạng thái:";
-            // 
             // btn_them
             // 
             this.btn_them.BackColor = System.Drawing.Color.Gray;
             this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(206, 429);
+            this.btn_them.Location = new System.Drawing.Point(199, 373);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(102, 46);
             this.btn_them.TabIndex = 27;
@@ -126,7 +113,7 @@
             // 
             this.btn_.BackColor = System.Drawing.Color.Gray;
             this.btn_.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_.Location = new System.Drawing.Point(344, 429);
+            this.btn_.Location = new System.Drawing.Point(331, 373);
             this.btn_.Name = "btn_";
             this.btn_.Size = new System.Drawing.Size(102, 46);
             this.btn_.TabIndex = 28;
@@ -151,15 +138,6 @@
             this.comboBox_tang.Size = new System.Drawing.Size(275, 24);
             this.comboBox_tang.TabIndex = 30;
             this.comboBox_tang.SelectedIndexChanged += new System.EventHandler(this.comboBox_tang_SelectedIndexChanged);
-            // 
-            // comboBox_trangthai
-            // 
-            this.comboBox_trangthai.FormattingEnabled = true;
-            this.comboBox_trangthai.Location = new System.Drawing.Point(241, 379);
-            this.comboBox_trangthai.Name = "comboBox_trangthai";
-            this.comboBox_trangthai.Size = new System.Drawing.Size(275, 24);
-            this.comboBox_trangthai.TabIndex = 31;
-            this.comboBox_trangthai.SelectedIndexChanged += new System.EventHandler(this.comboBox_trangthai_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -207,12 +185,10 @@
             this.Controls.Add(this.txt_giatheongay);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox_trangthai);
             this.Controls.Add(this.comboBox_tang);
             this.Controls.Add(this.comboBox_loaiphong);
             this.Controls.Add(this.btn_);
             this.Controls.Add(this.btn_them);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_sophong);
@@ -237,12 +213,10 @@
         private System.Windows.Forms.TextBox txt_sophong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_;
         private System.Windows.Forms.ComboBox comboBox_loaiphong;
         private System.Windows.Forms.ComboBox comboBox_tang;
-        private System.Windows.Forms.ComboBox comboBox_trangthai;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_giatheongay;

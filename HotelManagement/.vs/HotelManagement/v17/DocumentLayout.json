@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\hotelmanagement\\HotelManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\homeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|D:\\hotelmanagement\\HotelManagement\\dto\\hoadondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|solutionrelative:dto\\hoadondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|D:\\hotelmanagement\\HotelManagement\\dal\\hoadondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\hoadondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|D:\\hotelmanagement\\HotelManagement\\bbl\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|solutionrelative:bbl\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|D:\\hotelmanagement\\HotelManagement\\bbl\\thuebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|solutionrelative:bbl\\thuebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,18 +34,79 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeAdmin.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HomeAdmin.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\HomeAdmin.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HomeAdmin.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\HomeAdmin.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "ThueBLL.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\BBL\\ThueBLL.cs",
+              "RelativeDocumentMoniker": "BBL\\ThueBLL.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\BBL\\ThueBLL.cs",
+              "RelativeToolTip": "BBL\\ThueBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T08:31:13.738Z",
+              "WhenOpened": "2025-05-03T05:03:27.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HoaDonBLL.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\BBL\\HoaDonBLL.cs",
+              "RelativeDocumentMoniker": "BBL\\HoaDonBLL.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\BBL\\HoaDonBLL.cs",
+              "RelativeToolTip": "BBL\\HoaDonBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T04:16:47.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HoaDonDAL.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DAL\\HoaDonDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\HoaDonDAL.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DAL\\HoaDonDAL.cs",
+              "RelativeToolTip": "DAL\\HoaDonDAL.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAuwH8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T04:16:34.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HoaDonDTO.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DTO\\HoaDonDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\HoaDonDTO.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DTO\\HoaDonDTO.cs",
+              "RelativeToolTip": "DTO\\HoaDonDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T04:16:14.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HoaDon.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\HoaDon.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HoaDon.cs",
+              "RelativeToolTip": "HotelManagement\\HoaDon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMYAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T04:54:57.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HoaDon.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HoaDon.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\HoaDon.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HoaDon.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\HoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T04:15:36.922Z",
               "EditorCaption": " [Design]"
             }
           ]

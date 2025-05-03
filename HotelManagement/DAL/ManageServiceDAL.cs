@@ -106,5 +106,34 @@ namespace HotelManagement
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+        public List<ServiceDTO> GetServicesByBookingId(int bookingId)
+        {
+            List<ServiceDTO> services = new List<ServiceDTO>();
+            string query = @"SELECT s.id, s.service_name, s.price, su.quantity 
+                     FROM ServiceUsed su
+                     JOIN Service s ON su.service_id = s.id
+                     WHERE su.booking_id = @BookingId";
+
+            using (SqlConnection cn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, cn))
+            {
+                cmd.Parameters.AddWithValue("@BookingId", bookingId);
+                cn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    services.Add(new ServiceDTO
+                    {
+                        Id = Convert.ToInt32(reader["id"]),
+                        ServiceName = reader["service_name"].ToString(),
+                        Price = Convert.ToDecimal(reader["price"]),
+                        Quantity = Convert.ToInt32(reader["quantity"])
+                    });
+                }
+            }
+            return services;
+
+
+        }
     }
 }

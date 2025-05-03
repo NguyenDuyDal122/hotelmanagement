@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoiMatKhauDAL.cs" />
+    <Compile Include="HoaDonDAL.cs" />
     <Compile Include="LoginDAL.cs" />
     <Compile Include="ManageCustomerDAL.cs" />
     <Compile Include="ManageFloorDAL.cs" />
@@ -94,6 +95,8 @@
     <Compile Include="ThemPhongDAL.cs" />
     <Compile Include="ThemTaiKhoanDAL.cs" />
     <Compile Include="ThongTinCaNhanDAL.cs" />
+    <Compile Include="ThueDAL.cs" />
+    <Compile Include="TraPhongDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

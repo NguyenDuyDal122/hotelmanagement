@@ -53,32 +53,27 @@ CREATE TABLE Room (
 );
 
 CREATE TABLE Booking (
-    id INT IDENTITY(1,1) PRIMARY KEY,
+    id NVARCHAR(50) PRIMARY KEY,
     customer_id INT NOT NULL,
     staff_id INT NOT NULL,
+    room_id INT NOT NULL,
     check_in DATE NOT NULL,
     total_price_service DECIMAL(10,2) NOT NULL,
+    status NVARCHAR(20) NOT NULL DEFAULT 'checkin' CHECK (status IN ('checkin', 'checkout')),
     created_at DATETIME DEFAULT GETDATE(),
     FOREIGN KEY (customer_id) REFERENCES Customer(id) ON DELETE CASCADE,
-    FOREIGN KEY (staff_id) REFERENCES [User](id) ON DELETE CASCADE
-);
-
-CREATE TABLE BookingDetail (
-    id INT IDENTITY(1,1) PRIMARY KEY,
-    booking_id INT NOT NULL,
-    room_id INT NOT NULL,
-    FOREIGN KEY (booking_id) REFERENCES Booking(id) ON DELETE CASCADE,
+    FOREIGN KEY (staff_id) REFERENCES [User](id) ON DELETE CASCADE,
     FOREIGN KEY (room_id) REFERENCES Room(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Invoice (
     id INT IDENTITY(1,1) PRIMARY KEY,
-    booking_id INT NOT NULL,
-	check_out DATE NOT NULL,
+    booking_id NVARCHAR(50) NULL, -- Cho phép booking_id có thể là NULL
+    check_out DATE NOT NULL,
     total_amount DECIMAL(10,2) NOT NULL,
     payment_method NVARCHAR(50) CHECK (payment_method IN ('cash', 'credit_card', 'online')) NOT NULL,
     created_at DATETIME DEFAULT GETDATE(),
-    FOREIGN KEY (booking_id) REFERENCES Booking(id) ON DELETE CASCADE
+    FOREIGN KEY (booking_id) REFERENCES Booking(id) ON DELETE NO ACTION -- Không xóa dữ liệu ở bảng Invoice khi xóa bản ghi trong bảng Booking
 );
 
 CREATE TABLE Service (
@@ -86,12 +81,6 @@ CREATE TABLE Service (
     service_name NVARCHAR(255) NOT NULL UNIQUE,
     description NVARCHAR(MAX),
     price DECIMAL(10,2) NOT NULL
-);
-
-CREATE TABLE RevenueReport (
-    id INT IDENTITY(1,1) PRIMARY KEY,
-    report_date DATE NOT NULL,
-    total_revenue DECIMAL(15,2) NOT NULL DEFAULT 0
 );
 
 -- Thêm tài khoản Admin
@@ -113,7 +102,6 @@ DROP TABLE IF EXISTS RoomType;
 DROP TABLE IF EXISTS Customer;
 DROP TABLE IF EXISTS [User];
 DROP TABLE IF EXISTS Service;
-DROP TABLE IF EXISTS RevenueReport;
 DROP TABLE IF EXISTS Floor;
 
 INSERT INTO Customer (full_name, phone, email, address, identity_card)
@@ -140,4 +128,12 @@ VALUES
 ('101', 1, 1,400000, 500000, 'available'),
 ('102', 2, 1,300000, 400000, 'occupied'),
 ('201', 3, 2,400000, 500000, 'maintenance');
+
+INSERT INTO Service (service_name, description, price)
+VALUES
+('Massage', 'Dịch vụ mát-xa thư giãn', 200000),
+('Spa', 'Dịch vụ chăm sóc da và sức khỏe', 350000),
+('Gym', 'Phòng tập thể dục với đầy đủ thiết bị', 150000),
+('Laundry', 'Dịch vụ giặt ủi quần áo', 50000),
+('Breakfast', 'Bữa sáng cho khách hàng', 100000);
 

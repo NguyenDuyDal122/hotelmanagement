@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoiMatKhauBLL.cs" />
+    <Compile Include="HoaDonBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="ManageCustomerBLL.cs" />
     <Compile Include="ManageFloorBLL.cs" />
@@ -56,6 +57,8 @@
     <Compile Include="ThemPhongBLL.cs" />
     <Compile Include="ThemTaiKhoanBLL.cs" />
     <Compile Include="ThongTinCaNhanBLL.cs" />
+    <Compile Include="ThueBLL.cs" />
+    <Compile Include="TraPhongBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
