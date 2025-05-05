@@ -24,6 +24,11 @@ namespace HotelManagement
         private void TPhong_Load(object sender, EventArgs e)
         {
             LoadBookingData();
+            comboBox_phuongthucthanhtoan.Items.Add("cash");
+            comboBox_phuongthucthanhtoan.Items.Add("online");
+
+            // Chọn mặc định phương thức thanh toán là Tiền mặt
+            comboBox_phuongthucthanhtoan.SelectedIndex = 0;
         }
 
         private void LoadBookingData()
@@ -93,7 +98,7 @@ namespace HotelManagement
             }
         }
 
-        private void btn_TraPhong_Click(object sender, EventArgs e)
+        private async void btn_TraPhong_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txt_tongtien.Text))
             {
@@ -107,19 +112,85 @@ namespace HotelManagement
                 return;
             }
 
-            // Lấy thông tin từ dòng đang chọn
+            string paymentMethod = comboBox_phuongthucthanhtoan.SelectedItem?.ToString().ToLower();
+
+            if (string.IsNullOrEmpty(paymentMethod))
+            {
+                MessageBox.Show("Vui lòng chọn phương thức thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string bookingId = dgv_Phieuthue.CurrentRow.Cells["MãPhiếu"].Value.ToString();
             DateTime checkOut = dtpNgayTra.Value;
             decimal totalAmount = decimal.Parse(txt_tongtien.Text.Replace(",", ""));
-            string paymentMethod = "cash";
 
+            if (paymentMethod == "online")
+            {
+                // 1. Tạo link thanh toán PayPal
+                string paymentUrl = await PayPalPayment.CreatePayment(totalAmount);
+
+                if (!string.IsNullOrEmpty(paymentUrl))
+                {
+                    // 2. Mở trình duyệt để người dùng thanh toán
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = paymentUrl,
+                        UseShellExecute = true
+                    });
+
+                    // 3. Bắt đầu lắng nghe phản hồi từ PayPal
+                    await Task.Run(() =>
+                    {
+                        PayPalListener.StartListeningAsync((token, payerId) =>
+                        {
+                            Invoke(new Action(() =>
+                            {
+                                bool success = bookingBLL.AddInvoice(bookingId, checkOut, totalAmount, paymentMethod);
+                                if (success)
+                                {
+                                    MessageBox.Show("Thanh toán và trả phòng thành côn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    LoadBookingData();
+                                    txt_tienthuephong.Clear();
+                                    numberic_SoNgayThue.Value = 0;
+                                    numberic_SoGioThue.Value = 0;
+                                    txt_tongtien.Clear();
+                                    txt_giatheongay.Clear();
+                                    txt_giatheogio.Clear();
+                                    txt_tongtiendichvu.Clear();
+                                    comboBox_phuongthucthanhtoan.SelectedIndex = 0;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Trả phòng thất bại sau thanh toán.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }));
+                        });
+                    });
+                }
+                else
+                {
+                    MessageBox.Show("Không thể tạo thanh toán PayPal.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                return; // ❌ Không tiếp tục xử lý phần bên dưới
+            }
+
+            // Với phương thức thanh toán trực tiếp
             try
             {
                 bool success = bookingBLL.AddInvoice(bookingId, checkOut, totalAmount, paymentMethod);
                 if (success)
                 {
                     MessageBox.Show("Trả phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadBookingData(); // reload lại danh sách
+                    LoadBookingData();
+                    txt_tienthuephong.Clear();
+                    numberic_SoNgayThue.Value = 0;
+                    numberic_SoGioThue.Value = 0;
+                    txt_tongtien.Clear();
+                    txt_giatheongay.Clear();
+                    txt_giatheogio.Clear();
+                    txt_tongtiendichvu.Clear();
+                    comboBox_phuongthucthanhtoan.SelectedIndex = 0;
                 }
                 else
                 {
@@ -164,7 +235,7 @@ namespace HotelManagement
             DịchVụ = booking.TotalPriceService,
             NgàyTạo = booking.CreatedAt
         }
-            };
+            };  
 
             dgv_Phieuthue.DataSource = displayList;
         }

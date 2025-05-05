@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dtp_NgayTra = new System.Windows.Forms.GroupBox();
+            this.txt_tongtien = new System.Windows.Forms.TextBox();
             this.txt_tongtiendichvu = new System.Windows.Forms.TextBox();
             this.txt_giatheogio = new System.Windows.Forms.TextBox();
             this.txt_giatheongay = new System.Windows.Forms.TextBox();
@@ -62,7 +63,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txt_tongtien = new System.Windows.Forms.TextBox();
+            this.comboBox_phuongthucthanhtoan = new System.Windows.Forms.ComboBox();
             this.dtp_NgayTra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numberic_SoGioThue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberic_SoNgayThue)).BeginInit();
@@ -77,6 +78,7 @@
             // 
             // dtp_NgayTra
             // 
+            this.dtp_NgayTra.Controls.Add(this.comboBox_phuongthucthanhtoan);
             this.dtp_NgayTra.Controls.Add(this.txt_tongtien);
             this.dtp_NgayTra.Controls.Add(this.txt_tongtiendichvu);
             this.dtp_NgayTra.Controls.Add(this.txt_giatheogio);
@@ -102,6 +104,14 @@
             this.dtp_NgayTra.TabIndex = 12;
             this.dtp_NgayTra.TabStop = false;
             this.dtp_NgayTra.Text = "Thông tin trả";
+            // 
+            // txt_tongtien
+            // 
+            this.txt_tongtien.Location = new System.Drawing.Point(303, 240);
+            this.txt_tongtien.Name = "txt_tongtien";
+            this.txt_tongtien.ReadOnly = true;
+            this.txt_tongtien.Size = new System.Drawing.Size(335, 30);
+            this.txt_tongtien.TabIndex = 21;
             // 
             // txt_tongtiendichvu
             // 
@@ -145,7 +155,7 @@
             // btn_Thoat
             // 
             this.btn_Thoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_Thoat.Location = new System.Drawing.Point(1001, 228);
+            this.btn_Thoat.Location = new System.Drawing.Point(1100, 229);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(208, 55);
             this.btn_Thoat.TabIndex = 16;
@@ -156,7 +166,7 @@
             // btn_TraPhong
             // 
             this.btn_TraPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_TraPhong.Location = new System.Drawing.Point(649, 228);
+            this.btn_TraPhong.Location = new System.Drawing.Point(846, 228);
             this.btn_TraPhong.Name = "btn_TraPhong";
             this.btn_TraPhong.Size = new System.Drawing.Size(248, 55);
             this.btn_TraPhong.TabIndex = 15;
@@ -425,13 +435,13 @@
             this.panel5.Size = new System.Drawing.Size(1329, 328);
             this.panel5.TabIndex = 15;
             // 
-            // txt_tongtien
+            // comboBox_phuongthucthanhtoan
             // 
-            this.txt_tongtien.Location = new System.Drawing.Point(303, 240);
-            this.txt_tongtien.Name = "txt_tongtien";
-            this.txt_tongtien.ReadOnly = true;
-            this.txt_tongtien.Size = new System.Drawing.Size(335, 30);
-            this.txt_tongtien.TabIndex = 21;
+            this.comboBox_phuongthucthanhtoan.FormattingEnabled = true;
+            this.comboBox_phuongthucthanhtoan.Location = new System.Drawing.Point(649, 237);
+            this.comboBox_phuongthucthanhtoan.Name = "comboBox_phuongthucthanhtoan";
+            this.comboBox_phuongthucthanhtoan.Size = new System.Drawing.Size(191, 33);
+            this.comboBox_phuongthucthanhtoan.TabIndex = 22;
             // 
             // TPhong
             // 
@@ -501,5 +511,6 @@
         private System.Windows.Forms.TextBox txt_giatheongay;
         private System.Windows.Forms.TextBox txt_tienthuephong;
         private System.Windows.Forms.TextBox txt_tongtien;
+        private System.Windows.Forms.ComboBox comboBox_phuongthucthanhtoan;
     }
 }

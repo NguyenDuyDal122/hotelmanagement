@@ -1,9 +1,3 @@
-D:\hotelmanagement\HotelManagement\DTO\bin\Debug\DTO.dll
-D:\hotelmanagement\HotelManagement\DTO\bin\Debug\DTO.pdb
-D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
-D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
-D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.dll
-D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.pdb
 D:\QLKS\hotelmanagement\HotelManagement\DTO\bin\Debug\DTO.dll
 D:\QLKS\hotelmanagement\HotelManagement\DTO\bin\Debug\DTO.pdb
 D:\QLKS\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
@@ -34,3 +28,9 @@ D:\QLKSan\QLKS\QLKS\QLKS\QLKS\HotelManagement\DTO\obj\Debug\DTO.csproj.AssemblyR
 D:\QLKSan\QLKS\QLKS\QLKS\QLKS\HotelManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\QLKSan\QLKS\QLKS\QLKS\QLKS\HotelManagement\DTO\obj\Debug\DTO.dll
 D:\QLKSan\QLKS\QLKS\QLKS\QLKS\HotelManagement\DTO\obj\Debug\DTO.pdb
+D:\hotelmanagement\HotelManagement\DTO\bin\Debug\DTO.dll
+D:\hotelmanagement\HotelManagement\DTO\bin\Debug\DTO.pdb
+D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.dll
+D:\hotelmanagement\HotelManagement\DTO\obj\Debug\DTO.pdb

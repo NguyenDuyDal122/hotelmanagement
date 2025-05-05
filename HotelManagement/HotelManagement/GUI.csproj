@@ -51,6 +51,12 @@
     <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
     </Reference>
+    <Reference Include="PayPalCheckoutSdk, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPalCheckoutSdk.1.0.4\lib\netstandard2.0\PayPalCheckoutSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalHttp-Dotnet, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPalHttp.1.0.1\lib\netstandard2.0\PayPalHttp-Dotnet.dll</HintPath>
+    </Reference>
     <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RBush.4.0.0\lib\net47\RBush.dll</HintPath>
     </Reference>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemTaiKhoan.resx">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinCaNhan.resx">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>

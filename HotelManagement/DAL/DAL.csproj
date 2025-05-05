@@ -94,6 +94,7 @@
     <Compile Include="ThemKhachHangDAL.cs" />
     <Compile Include="ThemPhongDAL.cs" />
     <Compile Include="ThemTaiKhoanDAL.cs" />
+    <Compile Include="ThongKeDAL.cs" />
     <Compile Include="ThongTinCaNhanDAL.cs" />
     <Compile Include="ThueDAL.cs" />
     <Compile Include="TraPhongDAL.cs" />
