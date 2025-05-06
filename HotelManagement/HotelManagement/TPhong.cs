@@ -148,7 +148,7 @@ namespace HotelManagement
                                 bool success = bookingBLL.AddInvoice(bookingId, checkOut, totalAmount, paymentMethod);
                                 if (success)
                                 {
-                                    MessageBox.Show("Thanh toán và trả phòng thành côn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Thanh toán và trả phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     LoadBookingData();
                                     txt_tienthuephong.Clear();
                                     numberic_SoNgayThue.Value = 0;
