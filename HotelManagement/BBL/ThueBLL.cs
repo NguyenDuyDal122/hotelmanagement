@@ -25,9 +25,9 @@ namespace HotelManagement.BLL
     {
         private Service1DAL serviceDAL = new Service1DAL(); // Khởi tạo tại đây
 
-        public Dictionary<string, decimal> GetAllServices()
+        public List<Service1DTO> GetAllServices()
         {
-            return serviceDAL.GetAllServices();
+            return new Service1DAL().GetAllServices();
         }
     }
 

@@ -76,10 +76,10 @@ namespace HotelManagement.DAL
 
     public class Service1DAL
     {
-        public Dictionary<string, decimal> GetAllServices()
+        public List<Service1DTO> GetAllServices()
         {
-            Dictionary<string, decimal> services = new Dictionary<string, decimal>();
-            string query = "SELECT service_name, price FROM Service";
+            List<Service1DTO> services = new List<Service1DTO>();
+            string query = "SELECT id, service_name, price FROM Service";
             using (SqlConnection conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
@@ -88,7 +88,12 @@ namespace HotelManagement.DAL
                 {
                     while (reader.Read())
                     {
-                        services.Add(reader.GetString(reader.GetOrdinal("service_name")), reader.GetDecimal(reader.GetOrdinal("price")));
+                        services.Add(new Service1DTO
+                        {
+                            Id = reader.GetInt32(reader.GetOrdinal("id")),
+                            ServiceName = reader.GetString(reader.GetOrdinal("service_name")),
+                            Price = reader.GetDecimal(reader.GetOrdinal("price"))
+                        });
                     }
                 }
             }
@@ -234,6 +239,24 @@ namespace HotelManagement.DAL
 
     public class Booking1DAL
     {
+        public void AddBookingService(string bookingId, int serviceId, int quantity)
+        {
+            string query = @"
+                INSERT INTO BookingService (booking_id, service_id, quantity)
+                VALUES (@booking_id, @service_id, @quantity)";
+            using (SqlConnection conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@booking_id", bookingId);
+                    cmd.Parameters.AddWithValue("@service_id", serviceId);
+                    cmd.Parameters.AddWithValue("@quantity", quantity);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void AddBooking(Booking1DTO booking)
         {
             string query = @"

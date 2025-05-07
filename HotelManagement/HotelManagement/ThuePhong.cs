@@ -18,11 +18,13 @@ namespace HotelManagement
     {
         private int staffId;
         private Dictionary<string, decimal> servicePriceMap = new Dictionary<string, decimal>();
+        private Dictionary<string, Service1DTO> serviceMap = new Dictionary<string, Service1DTO>();
         private Customer1BLL customerBLL = new Customer1BLL();
         private Service1BLL serviceBLL = new Service1BLL();
         private Floor1BLL floorBLL = new Floor1BLL();
         private Room1BLL roomBLL = new Room1BLL();
         private Booking1BLL bookingBLL = new Booking1BLL();
+        private Booking1DAL bookingDAL = new Booking1DAL();
 
         public ThuePhong(int staffId)
         {
@@ -92,21 +94,24 @@ namespace HotelManagement
 
         private void cbTenDichVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedService = cbTenDichVu.SelectedItem?.ToString();
-            if (!string.IsNullOrEmpty(selectedService) && servicePriceMap.ContainsKey(selectedService))
+            string selectedService = cbTenDichVu.Text;
+            if (!string.IsNullOrEmpty(selectedService) && serviceMap.ContainsKey(selectedService))
             {
-                numberric_DonGia.Value = servicePriceMap[selectedService];
+                numberric_DonGia.Value = serviceMap[selectedService].Price;
             }
         }
 
         private void LoadServiceData()
         {
-            servicePriceMap = serviceBLL.GetAllServices();
+            List<Service1DTO> allServices = serviceBLL.GetAllServices();
+
             cbTenDichVu.Items.Clear();
-            foreach (string serviceName in servicePriceMap.Keys)
-            {
-                cbTenDichVu.Items.Add(serviceName);
-            }
+            cbTenDichVu.DisplayMember = "ServiceName";  // Hiển thị tên trong ComboBox
+            cbTenDichVu.ValueMember = "Id";             // Lưu giá trị là Id
+            cbTenDichVu.DataSource = allServices;
+
+            // Tạo map để tra cứu giá, id
+            serviceMap = allServices.ToDictionary(s => s.ServiceName, s => s);
         }
 
         private void btn_themDV_Click(object sender, EventArgs e)
@@ -117,6 +122,13 @@ namespace HotelManagement
                 return;
             }
 
+            Service1DTO selectedServiceDto = cbTenDichVu.SelectedItem as Service1DTO;
+            if (selectedServiceDto == null)
+            {
+                MessageBox.Show("Dịch vụ không hợp lệ!");
+                return;
+            }
+
             int soLuong = (int)numberic_SoLuong.Value;
             if (soLuong <= 0)
             {
@@ -124,10 +136,11 @@ namespace HotelManagement
                 return;
             }
 
-            string selectedService = cbTenDichVu.SelectedItem.ToString();
-            decimal donGia = numberric_DonGia.Value;
+            string selectedServiceName = selectedServiceDto.ServiceName;
+            decimal donGia = selectedServiceDto.Price; // Hoặc: numberric_DonGia.Value;
             decimal thanhTien = donGia * soLuong;
 
+            // Tạo cột nếu chưa có
             if (dgv_DichVu.Columns.Count == 0)
             {
                 dgv_DichVu.Columns.Add("ServiceName", "Tên dịch vụ");
@@ -136,7 +149,7 @@ namespace HotelManagement
                 dgv_DichVu.Columns.Add("TotalPrice", "Thành tiền");
             }
 
-            dgv_DichVu.Rows.Add(selectedService, donGia, soLuong, thanhTien);
+            dgv_DichVu.Rows.Add(selectedServiceName, donGia, soLuong, thanhTien);
             HienThiTongLenPhieu();
         }
 
@@ -285,7 +298,7 @@ namespace HotelManagement
                 txt_tongtiendichvu.Text = "0";
             }
 
-            string processedTotalPrice = txt_tongtiendichvu.Text.Replace(",", "").Replace(".", ".");
+            string processedTotalPrice = txt_tongtiendichvu.Text.Replace(",", ".");
 
             string bookingId = txt_TaoMaPhieu.Text.Trim();
 
@@ -302,7 +315,7 @@ namespace HotelManagement
             {
                 Id = bookingId,
                 CustomerId = customerId,
-                StaffId = this.staffId,
+                StaffId = staffId,  // Sử dụng staffId được lấy từ txt_maNV
                 RoomId = roomId,
                 CheckIn = dtimengayden.Value.Date,
                 TotalPriceService = totalPriceService
@@ -310,6 +323,34 @@ namespace HotelManagement
 
             bookingBLL.AddBooking(newBooking);
             MessageBox.Show("Thêm phiếu thuê thành công và cập nhật trạng thái phòng!");
+
+            foreach (DataGridViewRow row in dgv_DichVu.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                object serviceNameObj = row.Cells["ServiceName"].Value;
+                object quantityObj = row.Cells["Quantity"].Value;
+
+                if (serviceNameObj == null || quantityObj == null) continue;
+
+                string serviceName = serviceNameObj.ToString().Trim();
+
+                if (!serviceMap.ContainsKey(serviceName))
+                {
+                    MessageBox.Show($"Dịch vụ '{serviceName}' không tồn tại trong danh sách!");
+                    continue;
+                }
+
+                int serviceId = serviceMap[serviceName].Id;
+
+                if (!int.TryParse(quantityObj.ToString(), out int quantity))
+                {
+                    MessageBox.Show($"Số lượng cho dịch vụ '{serviceName}' không hợp lệ.");
+                    continue;
+                }
+
+                bookingDAL.AddBookingService(bookingId, serviceId, quantity);
+            }
 
             // Load lại danh sách phòng và phiếu thuê
             string selectedFloor = combo_Tang.SelectedItem?.ToString();
