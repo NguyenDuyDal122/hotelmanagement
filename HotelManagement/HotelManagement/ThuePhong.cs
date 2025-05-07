@@ -112,6 +112,12 @@ namespace HotelManagement
 
             // Tạo map để tra cứu giá, id
             serviceMap = allServices.ToDictionary(s => s.ServiceName, s => s);
+
+            // Chọn mục đầu tiên nếu có dữ liệu
+            if (cbTenDichVu.Items.Count > 0)
+            {
+                cbTenDichVu.SelectedIndex = -1;
+            }
         }
 
         private void btn_themDV_Click(object sender, EventArgs e)

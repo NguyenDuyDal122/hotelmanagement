@@ -36,7 +36,6 @@ namespace HotelManagement
 
                 if (danhSachHoaDon == null || danhSachHoaDon.Count == 0)
                 {
-                    MessageBox.Show("Không có dữ liệu hóa đơn để hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dataGridView_danhsachhoadon.DataSource = null;
                     return;
                 }

@@ -71,7 +71,7 @@ CREATE TABLE Invoice (
     booking_id NVARCHAR(50) NULL, -- Cho phép booking_id có thể là NULL
     check_out DATE NOT NULL,
     total_amount DECIMAL(10,2) NOT NULL,
-    payment_method NVARCHAR(50) CHECK (payment_method IN ('cash', 'credit_card', 'online')) NOT NULL,
+    payment_method NVARCHAR(50) CHECK (payment_method IN ('cash', 'online')) NOT NULL,
     created_at DATETIME DEFAULT GETDATE(),
     FOREIGN KEY (booking_id) REFERENCES Booking(id) ON DELETE NO ACTION -- Không xóa dữ liệu ở bảng Invoice khi xóa bản ghi trong bảng Booking
 );
@@ -83,16 +83,15 @@ CREATE TABLE Service (
     price DECIMAL(10,2) NOT NULL
 );
 
--- Thêm tài khoản Admin
-INSERT INTO [User] (username, full_name, phone, email, role, password_hash)
-VALUES 
-('admin1', 'Nguyễn Văn A', '0987654321', 'admin1@example.com', 'admin', 'admin123');
+CREATE TABLE BookingService (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    booking_id NVARCHAR(50) NOT NULL,
+    service_id INT NOT NULL,
+    quantity INT NOT NULL CHECK (quantity > 0),
 
--- Thêm tài khoản Staff
-INSERT INTO [User] (username, full_name, phone, email, role, password_hash)
-VALUES 
-('staff1', 'Trần Thị B', '0912345678', 'staff1@example.com', 'staff', 'staff123'),
-('staff2', 'Lê Văn C', '0923456789', 'staff2@example.com', 'staff', 'staff456');
+    FOREIGN KEY (booking_id) REFERENCES Booking(id) ON DELETE CASCADE,
+    FOREIGN KEY (service_id) REFERENCES Service(id) ON DELETE CASCADE
+);
 
 -- Xóa các bảng nếu tồn tại
 DROP TABLE IF EXISTS Invoice;
@@ -103,19 +102,32 @@ DROP TABLE IF EXISTS Customer;
 DROP TABLE IF EXISTS [User];
 DROP TABLE IF EXISTS Service;
 DROP TABLE IF EXISTS Floor;
+DROP TABLE IF EXISTS BookingService;
+
+-- Thêm tài khoản Admin
+INSERT INTO [User] (username, full_name, phone, email, role, password_hash)
+VALUES 
+('admin1', 'Nguyen Van A', '0987654321', 'admin1@example.com', 'admin', 'admin123');
+
+-- Thêm tài khoản Staff
+INSERT INTO [User] (username, full_name, phone, email, role, password_hash)
+VALUES 
+('staff1', 'Tran Thi B', '0912345678', 'staff1@example.com', 'staff', 'staff123'),
+('staff2', 'Le Van C', '0923456789', 'staff2@example.com', 'staff', 'staff456');
 
 INSERT INTO Customer (full_name, phone, email, address, identity_card)
 VALUES 
-('Phạm Thị D', '0934567890', 'phamthid@example.com', '123 Đường ABC, Quận 1, TP.HCM', '123456789'),
-('Nguyễn Văn E', '0945678901', 'nguyenvane@example.com', '456 Đường XYZ, Quận 3, TP.HCM', '234567890'),
-('Trần Thị F', '0956789012', 'tranthif@example.com', '789 Đường DEF, Quận 5, TP.HCM', '345678901');
+('Pham Thi D', '0934567890', 'phamthid@example.com', '123 Đường ABC, Quận 1, TP.HCM', '123456789'),
+('Nguyen Van E', '0945678901', 'nguyenvane@example.com', '456 Đường XYZ, Quận 3, TP.HCM', '234567890'),
+('Tran Thi F', '0956789012', 'tranthif@example.com', '789 Đường DEF, Quận 5, TP.HCM', '345678901');
 
 INSERT INTO Floor (max_rooms, description)
 VALUES 
-(2, 'Tầng 4'),
-(10, 'Tầng 1'),
-(10, 'Tầng 2'),
-(10, 'Tầng 3');
+(10, 'Tang 1'),
+(10, 'Tang 2'),
+(10, 'Tang 3'),
+(10, 'Tang 4'),
+(2, 'Tang 5');
 
 INSERT INTO RoomType (type_name, description, price_per_night)
 VALUES 
@@ -126,7 +138,7 @@ VALUES
 INSERT INTO Room (room_number, type_id, floor_id, price_per_day, price_per_hour, status)
 VALUES 
 ('101', 1, 1,400000, 500000, 'available'),
-('102', 2, 1,300000, 400000, 'occupied'),
+('102', 2, 1,300000, 400000, 'available'),
 ('201', 3, 2,400000, 500000, 'maintenance');
 
 INSERT INTO Service (service_name, description, price)
