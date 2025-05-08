@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongKe));
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_chonthang = new System.Windows.Forms.ComboBox();
@@ -36,7 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_tongdoanhthu = new System.Windows.Forms.TextBox();
             this.btn_thoat = new System.Windows.Forms.Button();
+            this.chartDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongKe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +82,7 @@
             this.dataGridViewThongKe.Name = "dataGridViewThongKe";
             this.dataGridViewThongKe.RowHeadersWidth = 51;
             this.dataGridViewThongKe.RowTemplate.Height = 24;
-            this.dataGridViewThongKe.Size = new System.Drawing.Size(1069, 435);
+            this.dataGridViewThongKe.Size = new System.Drawing.Size(1069, 295);
             this.dataGridViewThongKe.TabIndex = 3;
             // 
             // label2
@@ -85,7 +90,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(333, 528);
+            this.label2.Location = new System.Drawing.Point(343, 807);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 25);
             this.label2.TabIndex = 4;
@@ -93,7 +98,7 @@
             // 
             // txt_tongdoanhthu
             // 
-            this.txt_tongdoanhthu.Location = new System.Drawing.Point(527, 531);
+            this.txt_tongdoanhthu.Location = new System.Drawing.Point(532, 810);
             this.txt_tongdoanhthu.Name = "txt_tongdoanhthu";
             this.txt_tongdoanhthu.Size = new System.Drawing.Size(232, 22);
             this.txt_tongdoanhthu.TabIndex = 5;
@@ -108,12 +113,29 @@
             this.btn_thoat.UseVisualStyleBackColor = true;
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
+            // chartDoanhThu
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartDoanhThu.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartDoanhThu.Legends.Add(legend1);
+            this.chartDoanhThu.Location = new System.Drawing.Point(12, 372);
+            this.chartDoanhThu.Name = "chartDoanhThu";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartDoanhThu.Series.Add(series1);
+            this.chartDoanhThu.Size = new System.Drawing.Size(1069, 432);
+            this.chartDoanhThu.TabIndex = 7;
+            this.chartDoanhThu.Text = "chart1";
+            // 
             // ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(1093, 587);
+            this.ClientSize = new System.Drawing.Size(1093, 857);
+            this.Controls.Add(this.chartDoanhThu);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.txt_tongdoanhthu);
             this.Controls.Add(this.label2);
@@ -129,6 +151,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê doanh thu";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongKe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +166,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_tongdoanhthu;
         private System.Windows.Forms.Button btn_thoat;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDoanhThu;
     }
 }

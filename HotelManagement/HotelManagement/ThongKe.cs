@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using DTO;
 using BBL;
 using System.Linq;
+using System.Drawing;
 
 namespace HotelManagement
 {
@@ -57,9 +58,41 @@ namespace HotelManagement
 
                     dataGridViewThongKe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                    // Tính tổng doanh thu và hiển thị lên textbox
+                    // Tính tổng doanh thu
                     decimal tongDoanhThu = list.Sum(x => x.TotalAmount);
                     txt_tongdoanhthu.Text = tongDoanhThu.ToString("N0") + " VNĐ";
+
+                    // Vẽ biểu đồ doanh thu gộp theo ngày
+                    chartDoanhThu.Series.Clear();
+                    chartDoanhThu.ChartAreas.Clear();
+                    chartDoanhThu.Titles.Clear();
+                    chartDoanhThu.ChartAreas.Add("ChartArea1");
+
+                    var series = chartDoanhThu.Series.Add("Doanh thu theo ngày");
+                    series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+                    series.IsValueShownAsLabel = true;
+                    series.Color = Color.SkyBlue;
+
+                    // Gộp theo ngày thanh toán và tính tổng tiền từng ngày
+                    var doanhThuTheoNgay = list
+                        .GroupBy(x => x.PaymentDate.Date)
+                        .Select(g => new
+                        {
+                            Ngay = g.Key,
+                            TongTien = g.Sum(x => x.TotalAmount)
+                        })
+                        .OrderBy(x => x.Ngay)
+                        .ToList();
+
+                    foreach (var item in doanhThuTheoNgay)
+                    {
+                        string ngayStr = item.Ngay.ToString("dd/MM/yyyy");
+                        series.Points.AddXY(ngayStr, item.TongTien);
+                    }
+
+                    chartDoanhThu.ChartAreas[0].AxisX.Title = "Ngày thanh toán";
+                    chartDoanhThu.ChartAreas[0].AxisY.Title = "Tổng tiền (VNĐ)";
+                    chartDoanhThu.Titles.Add("Biểu đồ doanh thu trong tháng " + selectedMonth);
                 }
                 else
                 {

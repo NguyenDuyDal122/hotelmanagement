@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\hotelmanagement\\HotelManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|d:\\hotelmanagement\\hotelmanagement\\hotelmanagement\\thuephong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\thuephong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|d:\\hotelmanagement\\hotelmanagement\\bbl\\thongkebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|solutionrelative:bbl\\thongkebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|D:\\hotelmanagement\\HotelManagement\\dal\\thuedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\thuedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|d:\\hotelmanagement\\hotelmanagement\\dal\\thongkedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD94632-0D24-43EB-8437-81598D035051}|DAL\\DAL.csproj|solutionrelative:dal\\thongkedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|D:\\hotelmanagement\\HotelManagement\\dto\\thuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|solutionrelative:dto\\thuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|D:\\hotelmanagement\\HotelManagement\\hotelmanagement\\thuephong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4EB0A42B-424E-42B1-BB81-633293C5B257}|HotelManagement\\GUI.csproj|solutionrelative:hotelmanagement\\thuephong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|D:\\hotelmanagement\\HotelManagement\\bbl\\thuebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F243864-2C2B-41AD-826F-BD40797BC9D0}|BBL\\BLL.csproj|solutionrelative:bbl\\thuebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|d:\\hotelmanagement\\hotelmanagement\\dto\\thongkedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DC87C3D-1409-455B-9A21-1620C9AC29ED}|DTO\\DTO.csproj|solutionrelative:dto\\thongkedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,93 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HoaDon.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HoaDon.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\HoaDon.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HoaDon.cs",
-              "RelativeToolTip": "HotelManagement\\HoaDon.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwC8AAABCAAAA",
+              "DocumentIndex": 2,
+              "Title": "ThongKeBLL.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\BBL\\ThongKeBLL.cs",
+              "RelativeDocumentMoniker": "BBL\\ThongKeBLL.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\BBL\\ThongKeBLL.cs",
+              "RelativeToolTip": "BBL\\ThongKeBLL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T15:04:50.704Z",
+              "WhenOpened": "2025-05-08T15:48:35.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HoaDon.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HoaDon.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\HoaDon.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\HoaDon.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\HoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T15:04:49.053Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ThueBLL.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\BBL\\ThueBLL.cs",
-              "RelativeDocumentMoniker": "BBL\\ThueBLL.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\BBL\\ThueBLL.cs",
-              "RelativeToolTip": "BBL\\ThueBLL.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAcwGUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:45:28.848Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ThueDAL.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DAL\\ThueDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\ThueDAL.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DAL\\ThueDAL.cs",
-              "RelativeToolTip": "DAL\\ThueDAL.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAADwv1AAAABBAAAA",
+              "Title": "ThongKeDAL.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DAL\\ThongKeDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\ThongKeDAL.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DAL\\ThongKeDAL.cs",
+              "RelativeToolTip": "DAL\\ThongKeDAL.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAADQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:43:50.672Z",
+              "WhenOpened": "2025-05-08T15:48:33.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ThueDTO.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DTO\\ThueDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\ThueDTO.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DTO\\ThueDTO.cs",
-              "RelativeToolTip": "DTO\\ThueDTO.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwCYAAAAmAAAA",
+              "Title": "ThongKeDTO.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\DTO\\ThongKeDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\ThongKeDTO.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\DTO\\ThongKeDTO.cs",
+              "RelativeToolTip": "DTO\\ThongKeDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:43:40.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ThuePhong.cs",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThuePhong.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\ThuePhong.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThuePhong.cs",
-              "RelativeToolTip": "HotelManagement\\ThuePhong.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAAAHYAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:14:34.366Z",
+              "WhenOpened": "2025-05-08T15:48:29.196Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ThuePhong.cs [Design]",
-              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThuePhong.cs",
-              "RelativeDocumentMoniker": "HotelManagement\\ThuePhong.cs",
-              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThuePhong.cs [Design]",
-              "RelativeToolTip": "HotelManagement\\ThuePhong.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "ThongKe.cs",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThongKe.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ThongKe.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThongKe.cs",
+              "RelativeToolTip": "HotelManagement\\ThongKe.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAqwDUAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:14:20.141Z"
+              "WhenOpened": "2025-05-08T15:48:58.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThongKe.cs [Design]",
+              "DocumentMoniker": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThongKe.cs",
+              "RelativeDocumentMoniker": "HotelManagement\\ThongKe.cs",
+              "ToolTip": "D:\\hotelmanagement\\HotelManagement\\HotelManagement\\ThongKe.cs [Design]",
+              "RelativeToolTip": "HotelManagement\\ThongKe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T15:44:05.16Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
