@@ -62,6 +62,10 @@ namespace HotelManagement
                     decimal tongDoanhThu = list.Sum(x => x.TotalAmount);
                     txt_tongdoanhthu.Text = tongDoanhThu.ToString("N0") + " VNĐ";
 
+                    // Đếm tổng số lượt khách hàng (kể cả trùng tên)
+                    int soLuotKhach = list.Count;
+                    txt_sokhachhang.Text = soLuotKhach.ToString();
+
                     // Vẽ biểu đồ doanh thu gộp theo ngày
                     chartDoanhThu.Series.Clear();
                     chartDoanhThu.ChartAreas.Clear();

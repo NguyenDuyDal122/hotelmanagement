@@ -40,6 +40,8 @@
             this.txt_tongdoanhthu = new System.Windows.Forms.TextBox();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.chartDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_sokhachhang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +92,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(343, 807);
+            this.label2.Location = new System.Drawing.Point(120, 806);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(164, 25);
             this.label2.TabIndex = 4;
@@ -98,9 +100,9 @@
             // 
             // txt_tongdoanhthu
             // 
-            this.txt_tongdoanhthu.Location = new System.Drawing.Point(532, 810);
+            this.txt_tongdoanhthu.Location = new System.Drawing.Point(303, 809);
             this.txt_tongdoanhthu.Name = "txt_tongdoanhthu";
-            this.txt_tongdoanhthu.Size = new System.Drawing.Size(232, 22);
+            this.txt_tongdoanhthu.Size = new System.Drawing.Size(213, 22);
             this.txt_tongdoanhthu.TabIndex = 5;
             // 
             // btn_thoat
@@ -129,12 +131,32 @@
             this.chartDoanhThu.TabIndex = 7;
             this.chartDoanhThu.Text = "chart1";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(540, 809);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(209, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Tổng số khách hàng";
+            // 
+            // txt_sokhachhang
+            // 
+            this.txt_sokhachhang.Location = new System.Drawing.Point(771, 811);
+            this.txt_sokhachhang.Name = "txt_sokhachhang";
+            this.txt_sokhachhang.Size = new System.Drawing.Size(130, 22);
+            this.txt_sokhachhang.TabIndex = 9;
+            // 
             // ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1093, 857);
+            this.Controls.Add(this.txt_sokhachhang);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.chartDoanhThu);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.txt_tongdoanhthu);
@@ -167,5 +189,7 @@
         private System.Windows.Forms.TextBox txt_tongdoanhthu;
         private System.Windows.Forms.Button btn_thoat;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDoanhThu;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_sokhachhang;
     }
 }
